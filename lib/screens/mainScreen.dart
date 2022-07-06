@@ -12,9 +12,18 @@ class MainScreen extends StatelessWidget {
       backgroundColor: kPlatinum,
       appBar: AppBar(
         backgroundColor: kIndianTan,
-        title: const Text(
-          'Movie Manager',
-          style: TextStyle(color: kPlatinum),
+        title: Row(
+          children: [
+            Image.asset(
+              'images/mmplatinum.png',
+              width: 55.0,
+              height: 55.0,
+            ),
+            const Text(
+              'Movie Manager',
+              style: TextStyle(color: kPlatinum),
+            ),
+          ],
         ),
         actions: <Widget>[
           IconButton(
@@ -25,6 +34,14 @@ class MainScreen extends StatelessWidget {
             ),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: kIndianTan,
+        child: const Icon(
+          Icons.add,
+          color: kPlatinum,
+        ),
       ),
     );
   }
