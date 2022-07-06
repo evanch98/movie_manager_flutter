@@ -18,3 +18,6 @@ const kButtonTextStyle = TextStyle(
   fontSize: 22.0,
   fontWeight: FontWeight.bold,
 );
+
+const kLabelTextStyle =
+    TextStyle(color: kIndianTan, fontSize: 16.0, fontWeight: FontWeight.bold);

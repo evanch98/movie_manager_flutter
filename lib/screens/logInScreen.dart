@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
+import 'package:movie_manager_flutter/widgets/CustomButton.dart';
+import 'package:movie_manager_flutter/widgets/CustomTextField.dart';
 
 class LogInScreen extends StatelessWidget {
   static String id = 'LogInScreen';
@@ -35,6 +37,21 @@ class LogInScreen extends StatelessWidget {
             const SizedBox(
               height: 70.0,
             ),
+            CustomTextField(
+              labelText: 'Email',
+              passwordField: false,
+            ),
+            const SizedBox(
+              height: 17.0,
+            ),
+            CustomTextField(
+              labelText: 'Password',
+              passwordField: true,
+            ),
+            const SizedBox(
+              height: 17.0,
+            ),
+            CustomButton(buttonName: 'Log In', onPressed: () {}),
           ],
         ),
       ),
