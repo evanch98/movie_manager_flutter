@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
 import 'package:movie_manager_flutter/screens/logInScreen.dart';
+import 'package:movie_manager_flutter/screens/registerScreen.dart';
 import 'package:movie_manager_flutter/widgets/CustomButton.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -51,7 +52,9 @@ class WelcomeScreen extends StatelessWidget {
               ),
               CustomButton(
                 buttonName: 'Register',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, RegisterScreen.id);
+                },
               ),
             ],
           ),
