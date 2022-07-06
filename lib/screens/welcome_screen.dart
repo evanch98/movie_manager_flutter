@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
+import 'package:movie_manager_flutter/screens/logInScreen.dart';
 import 'package:movie_manager_flutter/widgets/CustomButton.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -36,14 +37,18 @@ class WelcomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 70.0,
               ),
-              const CustomButton(
+              CustomButton(
                 buttonName: 'Log In',
+                onPressed: () {
+                  Navigator.pushNamed(context, LogInScreen.id);
+                },
               ),
               const SizedBox(
                 height: 17.0,
               ),
-              const CustomButton(
+              CustomButton(
                 buttonName: 'Register',
+                onPressed: () {},
               ),
             ],
           ),

@@ -5,16 +5,18 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     Key? key,
     required this.buttonName,
+    required this.onPressed,
   }) : super(key: key);
 
   final String buttonName;
+  final Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50.0,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
             primary: kRodeoDust,
             elevation: 5,
