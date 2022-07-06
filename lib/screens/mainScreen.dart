@@ -13,11 +13,14 @@ class MainScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kIndianTan,
         title: Row(
-          children: [
+          children: <Widget>[
             Image.asset(
-              'images/mmplatinum.png',
-              width: 55.0,
-              height: 55.0,
+              'images/mmText.png',
+              width: 80.0,
+              height: 80.0,
+            ),
+            const SizedBox(
+              width: 17.0,
             ),
             const Text(
               'Movie Manager',
@@ -25,6 +28,7 @@ class MainScreen extends StatelessWidget {
             ),
           ],
         ),
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
             onPressed: () {},
