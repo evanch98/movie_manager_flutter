@@ -21,10 +21,13 @@ class WelcomeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Image.asset(
-                'images/mm.png',
-                width: kLogoSize,
-                height: kLogoSize,
+              Hero(
+                tag: 'logo',
+                child: Image.asset(
+                  'images/mm.png',
+                  width: kLogoSize,
+                  height: kLogoSize,
+                ),
               ),
               const SizedBox(
                 height: 17.0,

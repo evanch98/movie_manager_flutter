@@ -21,10 +21,13 @@ class LogInScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Image.asset(
-              'images/mm.png',
-              width: kLogoSize,
-              height: kLogoSize,
+            Hero(
+              tag: 'logo',
+              child: Image.asset(
+                'images/mm.png',
+                width: kLogoSize,
+                height: kLogoSize,
+              ),
             ),
             const SizedBox(
               height: 17.0,
@@ -37,14 +40,14 @@ class LogInScreen extends StatelessWidget {
             const SizedBox(
               height: 70.0,
             ),
-            CustomTextField(
+            const CustomTextField(
               labelText: 'Email',
               passwordField: false,
             ),
             const SizedBox(
               height: 17.0,
             ),
-            CustomTextField(
+            const CustomTextField(
               labelText: 'Password',
               passwordField: true,
             ),
