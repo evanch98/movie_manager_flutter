@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
+import 'package:movie_manager_flutter/widgets/CustomButton.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -33,22 +34,13 @@ class WelcomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 70.0,
               ),
-              SizedBox(
-                height: 50.0,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                      primary: kRodeoDust,
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      )),
-                  child: const Text(
-                    'Log In',
-                    style: kButtonTextStyle,
-                  ),
-                ),
+              const CustomButton(
+                buttonName: 'Log In',
               ),
+              const SizedBox(
+                height: 17.0,
+              ),
+              const CustomButton(buttonName: 'Register'),
             ],
           ),
         ),
