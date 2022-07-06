@@ -5,6 +5,21 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: const Color(0xFFE6E6E6),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Image.asset(
+              'images/mm.png',
+              width: 200,
+              height: 200,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
