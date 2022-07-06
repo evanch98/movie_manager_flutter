@@ -3,6 +3,8 @@ import 'package:movie_manager_flutter/constants.dart';
 import 'package:movie_manager_flutter/widgets/CustomButton.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  static String id = 'WelcomeScreen';
+
   const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
