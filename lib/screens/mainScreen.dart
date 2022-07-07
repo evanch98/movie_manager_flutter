@@ -66,49 +66,48 @@ class MainScreen extends StatelessWidget {
         ),
         child: ListView(
           children: const <Widget>[
-            ListTile(
-              leading: Icon(
-                Icons.schedule,
-                size: 30,
-                color: kIndianTan,
-              ),
-              title: Text(
-                "To Watch",
-                style: kMainScreenTitleTextStyle,
-              ),
+            CustomListTile(
+              icon: Icons.schedule,
+              title: 'To Watch',
             ),
             SizedBox(
               height: 137,
             ),
             Divider(),
-            ListTile(
-              leading: Icon(
-                Icons.favorite,
-                color: kIndianTan,
-                size: 30,
-              ),
-              title: Text(
-                'My Favorite',
-                style: kMainScreenTitleTextStyle,
-              ),
-            ),
+            CustomListTile(icon: Icons.favorite, title: 'My Favorite'),
             SizedBox(
               height: 137,
             ),
             Divider(),
-            ListTile(
-              leading: Icon(
-                Icons.done,
-                color: kIndianTan,
-                size: 30,
-              ),
-              title: Text(
-                'Watched',
-                style: kMainScreenTitleTextStyle,
-              ),
-            ),
+            CustomListTile(icon: Icons.done, title: 'Watched'),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class CustomListTile extends StatelessWidget {
+  const CustomListTile({
+    Key? key,
+    required this.icon,
+    required this.title,
+  }) : super(key: key);
+
+  final IconData icon;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Icon(
+        icon,
+        size: 30,
+        color: kIndianTan,
+      ),
+      title: Text(
+        title,
+        style: kMainScreenTitleTextStyle,
       ),
     );
   }
