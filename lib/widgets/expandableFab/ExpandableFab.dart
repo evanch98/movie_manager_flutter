@@ -90,6 +90,7 @@ class _ExpandableFabState extends State<ExpandableFab> {
           duration: const Duration(milliseconds: 250),
           child: FloatingActionButton(
             onPressed: _toggle,
+            backgroundColor: kIndianTan,
             child: const Icon(
               Icons.add,
               color: kPlatinum,
