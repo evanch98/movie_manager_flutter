@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
 import 'package:movie_manager_flutter/widgets/ActionButton.dart';
+import 'package:movie_manager_flutter/widgets/CustomListTile.dart';
 import 'package:movie_manager_flutter/widgets/expandableFab/ExpandableFab.dart';
 
 class MainScreen extends StatelessWidget {
@@ -82,32 +83,6 @@ class MainScreen extends StatelessWidget {
             CustomListTile(icon: Icons.done, title: 'Watched'),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class CustomListTile extends StatelessWidget {
-  const CustomListTile({
-    Key? key,
-    required this.icon,
-    required this.title,
-  }) : super(key: key);
-
-  final IconData icon;
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: Icon(
-        icon,
-        size: 30,
-        color: kIndianTan,
-      ),
-      title: Text(
-        title,
-        style: kMainScreenTitleTextStyle,
       ),
     );
   }
