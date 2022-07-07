@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
 
+/*
+ * ActionButton widget is used in custom ExpandableFab.
+ * The widget has two parameters.
+ * onPressed: Accept VoidCallback.
+ * icon: Accept icon to display on the button.
+ */
 @immutable
 class ActionButton extends StatelessWidget {
   const ActionButton({
