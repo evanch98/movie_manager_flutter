@@ -71,16 +71,16 @@ class MainScreen extends StatelessWidget {
               icon: Icons.schedule,
               title: 'To Watch',
             ),
-            SizedBox(
-              height: 137,
+            Divider(),
+            CustomListTile(
+              icon: Icons.favorite,
+              title: 'My Favorite',
             ),
             Divider(),
-            CustomListTile(icon: Icons.favorite, title: 'My Favorite'),
-            SizedBox(
-              height: 137,
+            CustomListTile(
+              icon: Icons.done,
+              title: 'Watched',
             ),
-            Divider(),
-            CustomListTile(icon: Icons.done, title: 'Watched'),
           ],
         ),
       ),
