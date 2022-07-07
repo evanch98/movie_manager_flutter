@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
+import 'package:movie_manager_flutter/widgets/expandableFab/ExpandingActionButton.dart';
 
 @immutable
 class ExpandableFab extends StatefulWidget {
@@ -65,6 +66,7 @@ class _ExpandableFabState extends State<ExpandableFab>
         clipBehavior: Clip.none,
         children: [
           _buildTapToCloseFab(),
+          ..._buildExpandingActionButtons(),
           _buildTapToOpenFab(),
         ],
       ),
@@ -123,5 +125,24 @@ class _ExpandableFabState extends State<ExpandableFab>
         ),
       ),
     );
+  }
+
+  List<Widget> _buildExpandingActionButtons() {
+    final children = <Widget>[];
+    final count = widget.children.length;
+    final step = 90.0 / (count - 1);
+    for (var i = 0, angleInDegrees = 0.0;
+        i < count;
+        i++, angleInDegrees += step) {
+      children.add(
+        ExpandingActionButton(
+          directionInDegrees: angleInDegrees,
+          maxDistance: widget.distance,
+          progress: _expandAnimation,
+          child: widget.children[i],
+        ),
+      );
+    }
+    return children;
   }
 }
