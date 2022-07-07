@@ -47,15 +47,15 @@ class MainScreen extends StatelessWidget {
         distance: 112.0,
         children: [
           ActionButton(
-            icon: const Icon(Icons.add),
+            icon: const Icon(Icons.schedule),
             onPressed: () {},
           ),
           ActionButton(
-            icon: const Icon(Icons.exposure_minus_1),
+            icon: const Icon(Icons.favorite),
             onPressed: () {},
           ),
           ActionButton(
-            icon: const Icon(Icons.exit_to_app),
+            icon: const Icon(Icons.done),
             onPressed: () {},
           ),
         ],
