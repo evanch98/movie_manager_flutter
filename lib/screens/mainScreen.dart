@@ -61,31 +61,35 @@ class MainScreen extends StatelessWidget {
         ),
         child: ListView(
           padding: EdgeInsets.zero,
-          children: const <Widget>[
-            Text(
+          children: <Widget>[
+            const Text(
               'Hello, anonymous',
               style: kGreetingTextStyle,
               textAlign: TextAlign.center,
             ),
-            CustomListTile(
+            const CustomListTile(
               icon: Icons.schedule,
               iconSize: kMainScreenTitleIconSize,
               title: 'To Watch',
               titleTextStyle: kMainScreenTitleTextStyle,
             ),
-            SizedBox(
+            const SizedBox(
               height: 17.0,
             ),
-            MovieCard(movieTitle: 'The Lodge'),
-            Divider(),
-            CustomListTile(
+            Row(
+              children: const [
+                MovieCard(movieTitle: 'The Lodge'),
+              ],
+            ),
+            const Divider(),
+            const CustomListTile(
               icon: Icons.favorite,
               iconSize: kMainScreenTitleIconSize,
               title: 'My Favorite',
               titleTextStyle: kMainScreenTitleTextStyle,
             ),
-            Divider(),
-            CustomListTile(
+            const Divider(),
+            const CustomListTile(
               icon: Icons.done,
               iconSize: kMainScreenTitleIconSize,
               title: 'Watched',
