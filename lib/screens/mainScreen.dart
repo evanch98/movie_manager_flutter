@@ -75,16 +75,19 @@ class MainScreen extends StatelessWidget {
             ),
             CustomListTile(
               icon: Icons.schedule,
+              iconSize: kMainScreenTitleIconSize,
               title: 'To Watch',
             ),
             Divider(),
             CustomListTile(
               icon: Icons.favorite,
+              iconSize: kMainScreenTitleIconSize,
               title: 'My Favorite',
             ),
             Divider(),
             CustomListTile(
               icon: Icons.done,
+              iconSize: kMainScreenTitleIconSize,
               title: 'Watched',
             ),
           ],
