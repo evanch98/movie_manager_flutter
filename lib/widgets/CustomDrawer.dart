@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
+import 'package:movie_manager_flutter/screens/welcome_screen.dart';
 import 'package:movie_manager_flutter/widgets/CustomListTile.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -23,14 +24,21 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           child: Center(
-            child: Image.asset('images/mm.png'),
+            child: Hero(
+              tag: 'logo',
+              child: Image.asset('images/mm.png'),
+            ),
           ),
         ),
-        const CustomListTile(
+        CustomListTile(
           icon: Icons.home,
           iconSize: 22.0,
           title: 'Home',
           titleTextStyle: kDrawerTitleTextStyle,
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.pushNamed(context, WelcomeScreen.id);
+          },
         ),
         const CustomListTile(
           icon: Icons.help,
