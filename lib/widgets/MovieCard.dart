@@ -16,7 +16,7 @@ class MovieCard extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 200.0,
+          height: 150.0,
           width: 100.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15.0),
@@ -25,6 +25,9 @@ class MovieCard extends StatelessWidget {
           child: Center(
             child: image ?? const Text('No Image'),
           ),
+        ),
+        const SizedBox(
+          height: 10.0,
         ),
         Text(
           movieTitle,

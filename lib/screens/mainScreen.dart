@@ -3,6 +3,7 @@ import 'package:movie_manager_flutter/constants.dart';
 import 'package:movie_manager_flutter/widgets/ActionButton.dart';
 import 'package:movie_manager_flutter/widgets/CustomDrawer.dart';
 import 'package:movie_manager_flutter/widgets/CustomListTile.dart';
+import 'package:movie_manager_flutter/widgets/MovieCard.dart';
 import 'package:movie_manager_flutter/widgets/expandableFab/ExpandableFab.dart';
 
 class MainScreen extends StatelessWidget {
@@ -72,6 +73,10 @@ class MainScreen extends StatelessWidget {
               title: 'To Watch',
               titleTextStyle: kMainScreenTitleTextStyle,
             ),
+            SizedBox(
+              height: 17.0,
+            ),
+            MovieCard(movieTitle: 'The Lodge'),
             Divider(),
             CustomListTile(
               icon: Icons.favorite,
