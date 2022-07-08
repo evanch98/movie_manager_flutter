@@ -20,27 +20,33 @@ class MovieCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       onLongPress: onLongPress,
-      child: Column(
-        children: [
-          Container(
-            height: 150.0,
-            width: 100.0,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15.0),
-              color: kRodeoDust,
+      child: Container(
+        margin: const EdgeInsets.only(left: 10.0),
+        child: Column(
+          children: [
+            Container(
+              height: 150.0,
+              width: 100.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
+                color: kRodeoDust,
+              ),
+              child: Center(
+                child: image ?? const Text('No Image'),
+              ),
             ),
-            child: Center(
-              child: image ?? const Text('No Image'),
+            const SizedBox(
+              height: 10.0,
             ),
-          ),
-          const SizedBox(
-            height: 10.0,
-          ),
-          Text(
-            movieTitle,
-            textAlign: TextAlign.center,
-          ),
-        ],
+            Text(
+              movieTitle.length > 14
+                  ? '${movieTitle.substring(0, 11)}...'
+                  : movieTitle,
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.clip,
+            ),
+          ],
+        ),
       ),
     );
   }

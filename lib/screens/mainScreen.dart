@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
+import 'package:movie_manager_flutter/utilities/movie_data.dart';
 import 'package:movie_manager_flutter/widgets/ActionButton.dart';
 import 'package:movie_manager_flutter/widgets/CustomDrawer.dart';
 import 'package:movie_manager_flutter/widgets/CustomListTile.dart';
-import 'package:movie_manager_flutter/widgets/MovieCard.dart';
 import 'package:movie_manager_flutter/widgets/expandableFab/ExpandableFab.dart';
+import 'package:provider/provider.dart';
 
 class MainScreen extends StatelessWidget {
   static String id = 'mainScreen';
@@ -76,10 +77,11 @@ class MainScreen extends StatelessWidget {
             const SizedBox(
               height: 17.0,
             ),
-            Row(
-              children: const [
-                MovieCard(movieTitle: 'The Lodge'),
-              ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: Provider.of<MovieData>(context).toWatch,
+              ),
             ),
             const Divider(),
             const CustomListTile(
