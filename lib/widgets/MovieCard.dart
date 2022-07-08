@@ -32,7 +32,7 @@ class MovieCard extends StatelessWidget {
                 color: kRodeoDust,
               ),
               child: Center(
-                child: image ?? const Text('No Image'),
+                child: image,
               ),
             ),
             const SizedBox(
