@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/* Every constant value for this application can be found in this file. */
+
 const kLogoSize = 126.0;
 
 const kPlatinum = Color(0xFFE6E6E6);
