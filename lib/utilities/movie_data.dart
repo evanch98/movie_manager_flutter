@@ -8,4 +8,14 @@ class MovieData extends ChangeNotifier {
     const MovieCard(movieTitle: 'Tomorrowland'),
     const MovieCard(movieTitle: 'New York Minute'),
   ];
+
+  void addToWatch(String movieTitle, Image image) {
+    toWatch.add(
+      MovieCard(
+        movieTitle: movieTitle,
+        image: image,
+      ),
+    );
+    notifyListeners();
+  }
 }

@@ -1,17 +1,36 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:movie_manager_flutter/constants.dart';
+import 'package:movie_manager_flutter/utilities/movie_data.dart';
 import 'package:movie_manager_flutter/widgets/CustomButton.dart';
 import 'package:movie_manager_flutter/widgets/CustomTextField.dart';
+import 'package:provider/provider.dart';
 
-class AddToWatchScreen extends StatelessWidget {
+class AddToWatchScreen extends StatefulWidget {
   static String id = 'AddToWatchScreen';
 
   const AddToWatchScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    late String movieTitle;
+  State<AddToWatchScreen> createState() => _AddToWatchScreenState();
+}
 
+class _AddToWatchScreenState extends State<AddToWatchScreen> {
+  late File image;
+  String? movieTitle;
+
+  Future pickImage() async {
+    final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (image == null) return;
+
+    final imageTemporary = File(image.path);
+    setState(() => this.image = imageTemporary);
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPlatinum,
       appBar: AppBar(
@@ -46,14 +65,13 @@ class AddToWatchScreen extends StatelessWidget {
               passwordField: false,
               onChanged: (String newValue) {
                 movieTitle = newValue;
-                print(movieTitle);
               },
             ),
             const SizedBox(
               height: 17.0,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () => pickImage(),
               child: const Text(
                 '+ Add Image',
                 style: kAddImageTextStyle,
@@ -62,7 +80,15 @@ class AddToWatchScreen extends StatelessWidget {
             const SizedBox(
               height: 17.0,
             ),
-            CustomButton(buttonName: 'Add', onPressed: () {})
+            CustomButton(
+                buttonName: 'Add',
+                onPressed: () {
+                  Provider.of<MovieData>(context, listen: false).addToWatch(
+                    movieTitle!,
+                    Image.file(image),
+                  );
+                  Navigator.pop(context);
+                })
           ],
         ),
       ),
