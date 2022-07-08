@@ -51,3 +51,8 @@ const kDrawerTitleTextStyle = TextStyle(
   color: kIndianTan,
   fontSize: 22.0,
 );
+
+const kAddImageTextStyle = TextStyle(
+  color: kIndianTan,
+  fontSize: 16.0,
+);

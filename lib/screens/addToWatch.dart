@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
+import 'package:movie_manager_flutter/widgets/CustomButton.dart';
 import 'package:movie_manager_flutter/widgets/CustomTextField.dart';
 
 class AddToWatchScreen extends StatelessWidget {
@@ -23,7 +24,7 @@ class AddToWatchScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
+          children: <Widget>[
             Image.asset(
               'images/mm.png',
               width: kLogoSize,
@@ -48,6 +49,20 @@ class AddToWatchScreen extends StatelessWidget {
                 print(movieTitle);
               },
             ),
+            const SizedBox(
+              height: 17.0,
+            ),
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                '+ Add Image',
+                style: kAddImageTextStyle,
+              ),
+            ),
+            const SizedBox(
+              height: 17.0,
+            ),
+            CustomButton(buttonName: 'Add', onPressed: () {})
           ],
         ),
       ),
