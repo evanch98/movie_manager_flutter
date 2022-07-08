@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
+import 'package:movie_manager_flutter/screens/addToWatch.dart';
 import 'package:movie_manager_flutter/screens/logInScreen.dart';
 import 'package:movie_manager_flutter/screens/mainScreen.dart';
 import 'package:movie_manager_flutter/screens/registerScreen.dart';
@@ -32,6 +33,7 @@ class MovieManager extends StatelessWidget {
           LogInScreen.id: (context) => const LogInScreen(),
           RegisterScreen.id: (context) => const RegisterScreen(),
           MainScreen.id: (context) => const MainScreen(),
+          AddToWatchScreen.id: (context) => const AddToWatchScreen(),
         },
       ),
     );

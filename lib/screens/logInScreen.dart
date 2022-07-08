@@ -40,16 +40,18 @@ class LogInScreen extends StatelessWidget {
             const SizedBox(
               height: 70.0,
             ),
-            const CustomTextField(
+            CustomTextField(
               labelText: 'Email',
               passwordField: false,
+              onChanged: (newValue) {},
             ),
             const SizedBox(
               height: 17.0,
             ),
-            const CustomTextField(
+            CustomTextField(
               labelText: 'Password',
               passwordField: true,
+              onChanged: (newValue) {},
             ),
             const SizedBox(
               height: 17.0,

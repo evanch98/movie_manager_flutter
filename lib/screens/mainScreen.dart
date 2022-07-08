@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
+import 'package:movie_manager_flutter/screens/addToWatch.dart';
 import 'package:movie_manager_flutter/utilities/movie_data.dart';
 import 'package:movie_manager_flutter/widgets/ActionButton.dart';
 import 'package:movie_manager_flutter/widgets/CustomDrawer.dart';
@@ -43,7 +44,9 @@ class MainScreen extends StatelessWidget {
         children: [
           ActionButton(
             icon: const Icon(Icons.schedule),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, AddToWatchScreen.id);
+            },
           ),
           ActionButton(
             icon: const Icon(Icons.favorite),

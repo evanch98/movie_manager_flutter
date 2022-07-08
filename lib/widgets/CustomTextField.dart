@@ -6,10 +6,12 @@ class CustomTextField extends StatelessWidget {
     Key? key,
     required this.labelText,
     required this.passwordField,
+    required this.onChanged,
   }) : super(key: key);
 
   final String labelText;
   final bool passwordField;
+  final Function(String value) onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +31,7 @@ class CustomTextField extends StatelessWidget {
             style: const TextStyle(
               fontSize: 22.0,
             ),
+            onChanged: onChanged,
           ),
         ],
       ),
