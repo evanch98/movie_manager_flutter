@@ -66,7 +66,13 @@ class MainScreen extends StatelessWidget {
           vertical: 12.0,
         ),
         child: ListView(
+          padding: EdgeInsets.zero,
           children: const <Widget>[
+            Text(
+              'Hello, anonymous',
+              style: kGreetingTextStyle,
+              textAlign: TextAlign.center,
+            ),
             CustomListTile(
               icon: Icons.schedule,
               title: 'To Watch',

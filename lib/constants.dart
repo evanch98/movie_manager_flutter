@@ -19,11 +19,20 @@ const kButtonTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-const kLabelTextStyle =
-    TextStyle(color: kIndianTan, fontSize: 16.0, fontWeight: FontWeight.bold);
+const kLabelTextStyle = TextStyle(
+  color: kIndianTan,
+  fontSize: 16.0,
+  fontWeight: FontWeight.bold,
+);
 
 const kMainScreenTitleTextStyle = TextStyle(
   color: kIndianTan,
   fontSize: 24.0,
   fontWeight: FontWeight.w900,
+);
+
+const kGreetingTextStyle = TextStyle(
+  color: kIndianTan,
+  fontSize: 16.0,
+  fontWeight: FontWeight.bold,
 );
