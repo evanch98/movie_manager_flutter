@@ -57,7 +57,7 @@ class MainScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
-          horizontal: 16.0,
+          horizontal: 5.0,
           vertical: 12.0,
         ),
         child: ListView(
