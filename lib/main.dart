@@ -19,7 +19,7 @@ class MovieManager extends StatelessWidget {
         dividerTheme: const DividerThemeData(
           space: 13,
           thickness: 2,
-          color: kBlack,
+          color: kRodeoDust,
         ),
       ),
       initialRoute: MainScreen.id,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
 import 'package:movie_manager_flutter/widgets/ActionButton.dart';
+import 'package:movie_manager_flutter/widgets/CustomDrawer.dart';
 import 'package:movie_manager_flutter/widgets/CustomListTile.dart';
 import 'package:movie_manager_flutter/widgets/expandableFab/ExpandableFab.dart';
 
@@ -32,16 +33,8 @@ class MainScreen extends StatelessWidget {
           ],
         ),
         centerTitle: true,
-        actions: <Widget>[
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.settings,
-              color: kPlatinum,
-            ),
-          )
-        ],
       ),
+      drawer: const CustomDrawer(),
       // ExpandableFab allows expansion of FloatingActionButton.
       floatingActionButton: ExpandableFab(
         distance: 112.0,
@@ -77,18 +70,21 @@ class MainScreen extends StatelessWidget {
               icon: Icons.schedule,
               iconSize: kMainScreenTitleIconSize,
               title: 'To Watch',
+              titleTextStyle: kMainScreenTitleTextStyle,
             ),
             Divider(),
             CustomListTile(
               icon: Icons.favorite,
               iconSize: kMainScreenTitleIconSize,
               title: 'My Favorite',
+              titleTextStyle: kMainScreenTitleTextStyle,
             ),
             Divider(),
             CustomListTile(
               icon: Icons.done,
               iconSize: kMainScreenTitleIconSize,
               title: 'Watched',
+              titleTextStyle: kMainScreenTitleTextStyle,
             ),
           ],
         ),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 const kLogoSize = 126.0;
 const kMainScreenTitleIconSize = 30.0;
+const kDrawerTitleIconSize = 24.0;
 
 const kPlatinum = Color(0xFFE6E6E6);
 const kRodeoDust = Color(0xFFC5A880);
@@ -38,4 +39,15 @@ const kGreetingTextStyle = TextStyle(
   color: kIndianTan,
   fontSize: 16.0,
   fontWeight: FontWeight.bold,
+);
+
+const kDrawerHeaderTextStyle = TextStyle(
+  color: kPlatinum,
+  fontSize: 30.0,
+  fontWeight: FontWeight.w900,
+);
+
+const kDrawerTitleTextStyle = TextStyle(
+  color: kIndianTan,
+  fontSize: 22.0,
 );

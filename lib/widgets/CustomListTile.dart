@@ -7,12 +7,14 @@ class CustomListTile extends StatelessWidget {
     required this.icon,
     required this.iconSize,
     required this.title,
+    required this.titleTextStyle,
     this.onTap,
   }) : super(key: key);
 
   final IconData icon;
   final double iconSize;
   final String title;
+  final TextStyle titleTextStyle;
   final VoidCallback? onTap;
 
   @override
@@ -25,7 +27,7 @@ class CustomListTile extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: kMainScreenTitleTextStyle,
+        style: titleTextStyle,
       ),
       onTap: onTap,
     );
