@@ -6,6 +6,7 @@ import '/constants.dart';
 import '/screens/addFavorite.dart';
 import '/screens/addToWatch.dart';
 import '/screens/addWatched.dart';
+import '/screens/helpScreen.dart';
 import '/screens/logInScreen.dart';
 import '/screens/mainScreen.dart';
 import '/screens/registerScreen.dart';
@@ -43,6 +44,7 @@ class MovieManager extends StatelessWidget {
           AddToWatchScreen.id: (context) => const AddToWatchScreen(),
           AddWatchedScreen.id: (context) => const AddWatchedScreen(),
           AddFavoriteScreen.id: (context) => const AddFavoriteScreen(),
+          HelpScreen.id: (context) => const HelpScreen(),
         },
       ),
     );

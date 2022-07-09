@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/constants.dart';
-import 'package:movie_manager_flutter/screens/welcome_screen.dart';
-import 'package:movie_manager_flutter/widgets/CustomListTile.dart';
+
+import '/widgets/CustomListTile.dart';
+import '../constants.dart';
+import '../screens/helpScreen.dart';
+import '../screens/welcome_screen.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -40,11 +42,15 @@ class CustomDrawer extends StatelessWidget {
             Navigator.pushNamed(context, WelcomeScreen.id);
           },
         ),
-        const CustomListTile(
+        CustomListTile(
           icon: Icons.help,
-          iconSize: 24.0,
+          iconSize: 22.0,
           title: 'Help',
           titleTextStyle: kDrawerTitleTextStyle,
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.pushNamed(context, HelpScreen.id);
+          },
         ),
         const CustomListTile(
           icon: Icons.info,
