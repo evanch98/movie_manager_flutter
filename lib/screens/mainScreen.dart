@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_manager_flutter/screens/addFavorite.dart';
 
 import '/screens/addToWatch.dart';
 import '/screens/addWatched.dart';
@@ -51,7 +52,9 @@ class MainScreen extends StatelessWidget {
           ),
           ActionButton(
             icon: const Icon(Icons.favorite),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, AddFavoriteScreen.id);
+            },
           ),
           ActionButton(
             icon: const Icon(Icons.done),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '/constants.dart';
+import '/screens/addFavorite.dart';
 import '/screens/addToWatch.dart';
 import '/screens/addWatched.dart';
 import '/screens/logInScreen.dart';
@@ -37,6 +38,7 @@ class MovieManager extends StatelessWidget {
           MainScreen.id: (context) => const MainScreen(),
           AddToWatchScreen.id: (context) => const AddToWatchScreen(),
           AddWatchedScreen.id: (context) => const AddWatchedScreen(),
+          AddFavoriteScreen.id: (context) => const AddFavoriteScreen(),
         },
       ),
     );
