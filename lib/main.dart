@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '/constants.dart';
 import '/screens/addToWatch.dart';
+import '/screens/addWatched.dart';
 import '/screens/logInScreen.dart';
 import '/screens/mainScreen.dart';
 import '/screens/registerScreen.dart';
@@ -35,6 +36,7 @@ class MovieManager extends StatelessWidget {
           RegisterScreen.id: (context) => const RegisterScreen(),
           MainScreen.id: (context) => const MainScreen(),
           AddToWatchScreen.id: (context) => const AddToWatchScreen(),
+          AddWatchedScreen.id: (context) => const AddWatchedScreen(),
         },
       ),
     );
