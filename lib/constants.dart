@@ -6,6 +6,15 @@ const kLogoSize = 126.0;
 const kMainScreenTitleIconSize = 30.0;
 const kDrawerTitleIconSize = 24.0;
 
+/* The following const values are for MovieData and things depending on
+ * MovieData.
+*/
+// Start --------------------
+const kToWatch = 'to watch';
+const kWatched = 'watched';
+const kFavorite = 'favorite';
+// end ----------------------
+
 const kPlatinum = Color(0xFFE6E6E6);
 const kRodeoDust = Color(0xFFC5A880);
 const kIndianTan = Color(0xFF532E1C);
