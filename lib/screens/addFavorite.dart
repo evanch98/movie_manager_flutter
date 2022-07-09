@@ -33,6 +33,7 @@ class _AddFavoriteScreenState extends State<AddFavoriteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: kPlatinum,
       appBar: AppBar(
         title: const Text('Add Favorite Movie'),

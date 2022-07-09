@@ -34,6 +34,7 @@ class _AddWatchedScreenState extends State<AddWatchedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: kPlatinum,
       appBar: AppBar(
         title: const Text('Add Watched Movie'),
