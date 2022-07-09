@@ -11,13 +11,16 @@ class MovieList extends StatelessWidget {
     return Consumer<MovieData>(
       builder: (context, movieData, child) {
         return SizedBox(
-          width: 200,
-          height: 180,
+          height: movieData.toWatchCount > 0 ? 180.0 : 0.0,
           child: ListView.builder(
             itemBuilder: (context, index) {
+              final movie = movieData.toWatch[index];
               return MovieCard(
-                image: movieData.toWatch[index].image,
-                movieTitle: movieData.toWatch[index].movieTitle,
+                image: movie.image,
+                movieTitle: movie.movieTitle,
+                onLongPress: () {
+                  movieData.removeFromToWatch(movie);
+                },
               );
             },
             itemCount: movieData.toWatchCount,

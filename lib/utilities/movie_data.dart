@@ -17,4 +17,9 @@ class MovieData extends ChangeNotifier {
   int get toWatchCount {
     return toWatch.length;
   }
+
+  void removeFromToWatch(Movie movie) {
+    toWatch.remove(movie);
+    notifyListeners();
+  }
 }
