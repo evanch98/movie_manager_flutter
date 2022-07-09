@@ -80,7 +80,9 @@ class MainScreen extends StatelessWidget {
             SizedBox(
               height: 17.0,
             ),
-            MovieList(),
+            MovieList(
+              list: kToWatch,
+            ),
             Divider(),
             CustomListTile(
               icon: Icons.favorite,
