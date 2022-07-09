@@ -94,9 +94,10 @@ class _AddToWatchScreenState extends State<AddToWatchScreen> {
                   );
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
-                Provider.of<MovieData>(context, listen: false).addToWatch(
+                Provider.of<MovieData>(context, listen: false).addMovie(
                   movieTitle!,
                   FileImage(image!),
+                  'to watch',
                 );
                 Navigator.pop(context);
               },

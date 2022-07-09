@@ -7,13 +7,24 @@ class MovieData extends ChangeNotifier {
   List<Movie> watched = [];
   List<Movie> favorite = [];
 
-  void addToWatch(String movieTitle, FileImage image) {
-    toWatch.add(
-      Movie(
-        movieTitle: movieTitle,
-        image: image,
-      ),
-    );
+  void addMovie(String movieTitle, FileImage image, String list) {
+    if (list == 'to watch') {
+      toWatch.add(
+        Movie(
+          movieTitle: movieTitle,
+          image: image,
+        ),
+      );
+    } else if (list == 'watched') {
+      watched.add(
+        Movie(movieTitle: movieTitle, image: image),
+      );
+      notifyListeners();
+    } else if (list == 'favorite') {
+      favorite.add(
+        Movie(movieTitle: movieTitle, image: image),
+      );
+    }
     notifyListeners();
   }
 
@@ -29,18 +40,14 @@ class MovieData extends ChangeNotifier {
     return favorite.length;
   }
 
-  void removeFromToWatch(Movie movie) {
-    toWatch.remove(movie);
-    notifyListeners();
-  }
-
-  void removeFromWatched(Movie movie) {
-    watched.remove(movie);
-    notifyListeners();
-  }
-
-  void removeFromFavorite(Movie movie) {
-    favorite.remove(movie);
+  void removeFromList(Movie movie, String list) {
+    if (list == 'to watch') {
+      toWatch.remove(movie);
+    } else if (list == 'watched') {
+      watched.remove(movie);
+    } else if (list == 'favorite') {
+      favorite.remove(movie);
+    }
     notifyListeners();
   }
 }

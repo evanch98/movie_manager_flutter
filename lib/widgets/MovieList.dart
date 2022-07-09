@@ -20,7 +20,7 @@ class MovieList extends StatelessWidget {
                 image: movie.image,
                 movieTitle: movie.movieTitle,
                 onLongPress: () {
-                  movieData.removeFromToWatch(movie);
+                  movieData.removeFromList(movie, 'to watch');
                 },
               );
             },
