@@ -35,7 +35,7 @@ class _AddFavoriteScreenState extends State<AddFavoriteScreen> {
     return Scaffold(
       backgroundColor: kPlatinum,
       appBar: AppBar(
-        title: const Text('Add To Watch'),
+        title: const Text('Add Favorite Movie'),
         backgroundColor: kIndianTan,
         centerTitle: true,
       ),

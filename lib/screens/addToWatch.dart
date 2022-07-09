@@ -35,7 +35,7 @@ class _AddToWatchScreenState extends State<AddToWatchScreen> {
     return Scaffold(
       backgroundColor: kPlatinum,
       appBar: AppBar(
-        title: const Text('Add To Watch'),
+        title: const Text('Add To Watch Movie'),
         backgroundColor: kIndianTan,
         centerTitle: true,
       ),
