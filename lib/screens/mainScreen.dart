@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '/screens/addToWatch.dart';
+import '/screens/addWatched.dart';
 import '../constants.dart';
 import '../widgets/ActionButton.dart';
 import '../widgets/CustomDrawer.dart';
@@ -54,7 +55,9 @@ class MainScreen extends StatelessWidget {
           ),
           ActionButton(
             icon: const Icon(Icons.done),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, AddWatchedScreen.id);
+            },
           ),
         ],
       ),
