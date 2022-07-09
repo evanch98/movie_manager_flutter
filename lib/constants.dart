@@ -66,3 +66,10 @@ const kAddImageTextStyle = TextStyle(
   color: kIndianTan,
   fontSize: 16.0,
 );
+
+const kHelpParaTextStyle = TextStyle(
+  color: kIndianTan,
+  height: 1.5,
+  fontSize: 20.0,
+  fontWeight: FontWeight.w500,
+);
