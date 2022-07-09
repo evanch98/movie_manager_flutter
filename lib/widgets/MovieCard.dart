@@ -5,20 +5,17 @@ class MovieCard extends StatelessWidget {
   const MovieCard({
     Key? key,
     required this.image,
-    this.onTap,
     this.onLongPress,
     required this.movieTitle,
   }) : super(key: key);
 
   final FileImage image;
   final String movieTitle;
-  final VoidCallback? onTap;
   final VoidCallback? onLongPress;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
       onLongPress: onLongPress,
       child: Container(
         margin: const EdgeInsets.only(left: 10.0),

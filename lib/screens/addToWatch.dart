@@ -81,24 +81,25 @@ class _AddToWatchScreenState extends State<AddToWatchScreen> {
               height: 17.0,
             ),
             CustomButton(
-                buttonName: 'Add',
-                onPressed: () {
-                  if (image == null) {
-                    SnackBar snackBar = SnackBar(
-                      content: const Text('Please add an image'),
-                      action: SnackBarAction(
-                        label: 'Add',
-                        onPressed: () => pickImage(),
-                      ),
-                    );
-                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                  }
-                  Provider.of<MovieData>(context, listen: false).addToWatch(
-                    movieTitle!,
-                    FileImage(image!),
+              buttonName: 'Add',
+              onPressed: () {
+                if (image == null) {
+                  SnackBar snackBar = SnackBar(
+                    content: const Text('Please add an image'),
+                    action: SnackBarAction(
+                      label: 'Add',
+                      onPressed: () => pickImage(),
+                    ),
                   );
-                  Navigator.pop(context);
-                })
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }
+                Provider.of<MovieData>(context, listen: false).addToWatch(
+                  movieTitle!,
+                  FileImage(image!),
+                );
+                Navigator.pop(context);
+              },
+            )
           ],
         ),
       ),

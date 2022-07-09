@@ -13,4 +13,9 @@ class MovieData extends ChangeNotifier {
     );
     notifyListeners();
   }
+
+  void removeFromWatch(MovieCard movieCard) {
+    toWatch.remove(movieCard);
+    notifyListeners();
+  }
 }
