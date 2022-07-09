@@ -21,6 +21,7 @@ class AddWatchedScreen extends StatefulWidget {
 class _AddWatchedScreenState extends State<AddWatchedScreen> {
   File? image;
   String? movieTitle;
+  bool checkboxValue = false;
 
   Future pickImage() async {
     final image = await ImagePicker().pickImage(source: ImageSource.gallery);
@@ -71,6 +72,25 @@ class _AddWatchedScreenState extends State<AddWatchedScreen> {
             const SizedBox(
               height: 17.0,
             ),
+            CheckboxListTile(
+              title: const Text(
+                'Favorite',
+                style: TextStyle(
+                  color: kIndianTan,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              value: checkboxValue,
+              onChanged: (value) {
+                setState(() {
+                  checkboxValue = value!;
+                });
+              },
+              activeColor: kIndianTan,
+            ),
+            const SizedBox(
+              height: 17.0,
+            ),
             TextButton(
               onPressed: () => pickImage(),
               child: const Text(
@@ -99,6 +119,13 @@ class _AddWatchedScreenState extends State<AddWatchedScreen> {
                   FileImage(image!),
                   kWatched,
                 );
+                if (checkboxValue == true) {
+                  Provider.of<MovieData>(context, listen: false).addMovie(
+                    movieTitle!,
+                    FileImage(image!),
+                    kFavorite,
+                  );
+                }
                 Navigator.pop(context);
               },
             )

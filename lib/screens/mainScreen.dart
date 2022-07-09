@@ -93,12 +93,24 @@ class MainScreen extends StatelessWidget {
               title: 'My Favorite',
               titleTextStyle: kMainScreenTitleTextStyle,
             ),
+            SizedBox(
+              height: 17.0,
+            ),
+            MovieList(
+              list: kFavorite,
+            ),
             Divider(),
             CustomListTile(
               icon: Icons.done,
               iconSize: kMainScreenTitleIconSize,
               title: 'Watched',
               titleTextStyle: kMainScreenTitleTextStyle,
+            ),
+            SizedBox(
+              height: 17.0,
+            ),
+            MovieList(
+              list: kWatched,
             ),
           ],
         ),
