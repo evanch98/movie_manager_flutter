@@ -85,7 +85,10 @@ class _AddToWatchScreenState extends State<AddToWatchScreen> {
                 onPressed: () {
                   Provider.of<MovieData>(context, listen: false).addToWatch(
                     movieTitle!,
-                    Image.file(image),
+                    Image.file(
+                      image,
+                      fit: BoxFit.fitHeight,
+                    ),
                   );
                   Navigator.pop(context);
                 })
