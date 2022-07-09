@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '/widgets/CustomListTile.dart';
 import '../constants.dart';
+import '../screens/aboutScreen.dart';
 import '../screens/helpScreen.dart';
 import '../screens/welcome_screen.dart';
 
@@ -52,11 +53,15 @@ class CustomDrawer extends StatelessWidget {
             Navigator.pushNamed(context, HelpScreen.id);
           },
         ),
-        const CustomListTile(
+        CustomListTile(
           icon: Icons.info,
           iconSize: 22.0,
           title: 'About',
           titleTextStyle: kDrawerTitleTextStyle,
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.pushNamed(context, AboutScreen.id);
+          },
         )
       ],
     ));

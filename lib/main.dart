@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '/constants.dart';
+import '/screens/aboutScreen.dart';
 import '/screens/addFavorite.dart';
 import '/screens/addToWatch.dart';
 import '/screens/addWatched.dart';
@@ -45,6 +46,7 @@ class MovieManager extends StatelessWidget {
           AddWatchedScreen.id: (context) => const AddWatchedScreen(),
           AddFavoriteScreen.id: (context) => const AddFavoriteScreen(),
           HelpScreen.id: (context) => const HelpScreen(),
+          AboutScreen.id: (context) => const AboutScreen(),
         },
       ),
     );
