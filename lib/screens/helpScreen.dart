@@ -24,7 +24,7 @@ class HelpScreen extends StatelessWidget {
               'The Movie Manager application is for making lists of movies you '
               'are planning to watch or have already watched. You can also '
               'add your favorite movies.',
-              style: kHelpParaTextStyle,
+              style: kParaTextStyle,
             ),
             const SizedBox(
               height: 17.0,
@@ -49,7 +49,7 @@ class HelpScreen extends StatelessWidget {
               'to add to the favorite movie list.\nYou can delete a movie '
               'card from each list by long-pressing the card you want to '
               'remove.',
-              style: kHelpParaTextStyle,
+              style: kParaTextStyle,
             ),
           ],
         ),
