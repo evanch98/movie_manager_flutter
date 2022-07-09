@@ -13,4 +13,8 @@ class MovieData extends ChangeNotifier {
     );
     notifyListeners();
   }
+
+  int get toWatchCount {
+    return toWatch.length;
+  }
 }

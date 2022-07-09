@@ -6,6 +6,8 @@ import 'package:movie_manager_flutter/widgets/CustomDrawer.dart';
 import 'package:movie_manager_flutter/widgets/CustomListTile.dart';
 import 'package:movie_manager_flutter/widgets/expandableFab/ExpandableFab.dart';
 
+import '../widgets/MovieList.dart';
+
 class MainScreen extends StatelessWidget {
   static String id = 'mainScreen';
 
@@ -63,36 +65,31 @@ class MainScreen extends StatelessWidget {
         ),
         child: ListView(
           padding: EdgeInsets.zero,
-          children: <Widget>[
-            const Text(
+          children: const <Widget>[
+            Text(
               'Hello, anonymous',
               style: kGreetingTextStyle,
               textAlign: TextAlign.center,
             ),
-            const CustomListTile(
+            CustomListTile(
               icon: Icons.schedule,
               iconSize: kMainScreenTitleIconSize,
               title: 'To Watch',
               titleTextStyle: kMainScreenTitleTextStyle,
             ),
-            const SizedBox(
+            SizedBox(
               height: 17.0,
             ),
-            // SingleChildScrollView(
-            //   scrollDirection: Axis.horizontal,
-            //   child: Row(
-            //     children: Provider.of<MovieData>(context).toWatch,
-            //   ),
-            // ),
-            const Divider(),
-            const CustomListTile(
+            MovieList(),
+            Divider(),
+            CustomListTile(
               icon: Icons.favorite,
               iconSize: kMainScreenTitleIconSize,
               title: 'My Favorite',
               titleTextStyle: kMainScreenTitleTextStyle,
             ),
-            const Divider(),
-            const CustomListTile(
+            Divider(),
+            CustomListTile(
               icon: Icons.done,
               iconSize: kMainScreenTitleIconSize,
               title: 'Watched',
