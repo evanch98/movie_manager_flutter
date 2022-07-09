@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 /* Every constant value for this application can be found in this file. */
 
@@ -20,7 +21,7 @@ const kRodeoDust = Color(0xFFC5A880);
 const kIndianTan = Color(0xFF532E1C);
 const kBlack = Color(0xFF0F0F0F);
 
-const kTitleTextStyle = TextStyle(
+TextStyle kTitleTextStyle = GoogleFonts.robotoSlab(
   color: kIndianTan,
   fontSize: 30,
   fontWeight: FontWeight.w900,

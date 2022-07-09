@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '/constants.dart';
@@ -28,6 +29,9 @@ class MovieManager extends StatelessWidget {
             space: 13,
             thickness: 2,
             color: kRodeoDust,
+          ),
+          textTheme: GoogleFonts.robotoTextTheme(
+            Theme.of(context).textTheme,
           ),
         ),
         initialRoute: MainScreen.id,

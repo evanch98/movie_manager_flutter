@@ -55,7 +55,7 @@ class _AddWatchedScreenState extends State<AddWatchedScreen> {
             const SizedBox(
               height: 17.0,
             ),
-            const Text(
+            Text(
               'Movie Manager',
               style: kTitleTextStyle,
               textAlign: TextAlign.center,

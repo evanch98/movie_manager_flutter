@@ -54,7 +54,7 @@ class _AddFavoriteScreenState extends State<AddFavoriteScreen> {
             const SizedBox(
               height: 17.0,
             ),
-            const Text(
+            Text(
               'Movie Manager',
               style: kTitleTextStyle,
               textAlign: TextAlign.center,
