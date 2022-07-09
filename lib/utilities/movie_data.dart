@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/widgets/MovieCard.dart';
 
 class MovieData extends ChangeNotifier {
-  List<MovieCard> toWatch = [
-    const MovieCard(movieTitle: 'The Lodge'),
-  ];
+  List<MovieCard> toWatch = [];
 
-  void addToWatch(String movieTitle, Image image) {
+  void addToWatch(String movieTitle, FileImage image) {
     toWatch.add(
       MovieCard(
         movieTitle: movieTitle,

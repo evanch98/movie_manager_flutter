@@ -4,13 +4,13 @@ import 'package:movie_manager_flutter/constants.dart';
 class MovieCard extends StatelessWidget {
   const MovieCard({
     Key? key,
-    this.image,
+    required this.image,
     this.onTap,
     this.onLongPress,
     required this.movieTitle,
   }) : super(key: key);
 
-  final Image? image;
+  final FileImage image;
   final String movieTitle;
   final VoidCallback? onTap;
   final VoidCallback? onLongPress;
@@ -28,11 +28,13 @@ class MovieCard extends StatelessWidget {
               height: 150.0,
               width: 100.0,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
+                borderRadius: BorderRadius.circular(10.0),
                 color: kRodeoDust,
               ),
-              child: Center(
-                child: image,
+              clipBehavior: Clip.hardEdge,
+              child: Image(
+                image: image,
+                fit: BoxFit.fill,
               ),
             ),
             const SizedBox(
