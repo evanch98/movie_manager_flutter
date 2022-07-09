@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_manager_flutter/constants.dart';
 import 'package:provider/provider.dart';
 
 import '/utilities/movie_data.dart';
@@ -20,7 +21,7 @@ class MovieList extends StatelessWidget {
                 image: movie.image,
                 movieTitle: movie.movieTitle,
                 onLongPress: () {
-                  movieData.removeFromList(movie, 'to watch');
+                  movieData.removeFromList(movie, kToWatch);
                 },
               );
             },
