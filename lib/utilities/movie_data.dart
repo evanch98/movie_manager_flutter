@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/utilities/movie.dart';
+
+import '/utilities/movie.dart';
 
 class MovieData extends ChangeNotifier {
   List<Movie> toWatch = [];

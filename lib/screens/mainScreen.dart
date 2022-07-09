@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/constants.dart';
-import 'package:movie_manager_flutter/screens/addToWatch.dart';
-import 'package:movie_manager_flutter/widgets/ActionButton.dart';
-import 'package:movie_manager_flutter/widgets/CustomDrawer.dart';
-import 'package:movie_manager_flutter/widgets/CustomListTile.dart';
-import 'package:movie_manager_flutter/widgets/expandableFab/ExpandableFab.dart';
 
+import '/screens/addToWatch.dart';
+import '../constants.dart';
+import '../widgets/ActionButton.dart';
+import '../widgets/CustomDrawer.dart';
+import '../widgets/CustomListTile.dart';
 import '../widgets/MovieList.dart';
+import '../widgets/expandableFab/ExpandableFab.dart';
 
 class MainScreen extends StatelessWidget {
   static String id = 'mainScreen';

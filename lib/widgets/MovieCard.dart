@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/constants.dart';
+
+import '../constants.dart';
 
 class MovieCard extends StatelessWidget {
   const MovieCard({

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/constants.dart';
-import 'package:movie_manager_flutter/screens/addToWatch.dart';
-import 'package:movie_manager_flutter/screens/logInScreen.dart';
-import 'package:movie_manager_flutter/screens/mainScreen.dart';
-import 'package:movie_manager_flutter/screens/registerScreen.dart';
-import 'package:movie_manager_flutter/screens/welcome_screen.dart';
-import 'package:movie_manager_flutter/utilities/movie_data.dart';
 import 'package:provider/provider.dart';
+
+import '/constants.dart';
+import '/screens/addToWatch.dart';
+import '/screens/logInScreen.dart';
+import '/screens/mainScreen.dart';
+import '/screens/registerScreen.dart';
+import '/screens/welcome_screen.dart';
+import '/utilities/movie_data.dart';
 
 void main() {
   runApp(const MovieManager());

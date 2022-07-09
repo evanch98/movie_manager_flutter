@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/utilities/movie_data.dart';
-import 'package:movie_manager_flutter/widgets/MovieCard.dart';
 import 'package:provider/provider.dart';
+
+import '/utilities/movie_data.dart';
+import '../widgets/MovieCard.dart';
 
 class MovieList extends StatelessWidget {
   const MovieList({Key? key}) : super(key: key);

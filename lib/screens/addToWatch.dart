@@ -2,11 +2,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:movie_manager_flutter/constants.dart';
-import 'package:movie_manager_flutter/utilities/movie_data.dart';
-import 'package:movie_manager_flutter/widgets/CustomButton.dart';
-import 'package:movie_manager_flutter/widgets/CustomTextField.dart';
 import 'package:provider/provider.dart';
+
+import '/widgets/CustomButton.dart';
+import '/widgets/CustomTextField.dart';
+import '../constants.dart';
+import '../utilities/movie_data.dart';
 
 class AddToWatchScreen extends StatefulWidget {
   static String id = 'AddToWatchScreen';
