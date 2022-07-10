@@ -96,8 +96,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                       Navigator.pushNamed(context, MainScreen.id);
                     }
-                  } catch (e) {
-                    print(e);
+                  } on FirebaseAuthException catch (e) {
+                    SnackBar snackBar = const SnackBar(
+                      content: Text('Something went wrong. Please try again'),
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   }
                 }),
           ],
