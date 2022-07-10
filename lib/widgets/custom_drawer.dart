@@ -63,7 +63,11 @@ class CustomDrawer extends StatelessWidget {
           titleTextStyle: kDrawerTitleTextStyle,
           onTap: () {
             Navigator.pop(context);
-            Navigator.pushNamed(context, WelcomeScreen.id);
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              WelcomeScreen.id,
+              (Route<dynamic> route) => false,
+            );
           },
         ),
       ],
