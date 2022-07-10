@@ -45,10 +45,10 @@ class HelpScreen extends StatelessWidget {
               'a screen you choose. The screen may be "Add To Watch Movie," '
               '"Add Watched Movie," or "Add Favorite Movie." The movie Title'
               ' is optional, but the image is required for each movie card. '
-              '\nIn "Add Watched Movie," you can check the "Favorite" checkbox '
-              'to add to the favorite movie list.\nYou can delete a movie '
-              'card from each list by long-pressing the card you want to '
-              'remove.',
+              '\nYou can press "+Add Image" button to add an image. \nIn "Add'
+              'Watched Movie," you can check the "Favorite" checkbox to add to'
+              'the favorite movie list.\nYou can delete a movie card from each '
+              'list by long-pressing the card you want to remove.',
               style: kParaTextStyle,
             ),
           ],
