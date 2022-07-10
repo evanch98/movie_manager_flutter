@@ -109,64 +109,64 @@ class _MainScreenState extends State<MainScreen> {
         ),
         child: ListView(
           padding: EdgeInsets.zero,
-          children: const <Widget>[
+          children: <Widget>[
             // This widget is to greet users with their name.
             Text(
-              'Hello, anonymous',
+              'Hello, ${loggedInUser.email}',
               style: kGreetingTextStyle,
               textAlign: TextAlign.center,
             ),
             // This widget is to display the title of "To Watch" movie list.
-            CustomListTile(
+            const CustomListTile(
               icon: Icons.schedule,
               iconSize: kMainScreenTitleIconSize,
               title: 'To Watch',
               titleTextStyle: kMainScreenTitleTextStyle,
             ),
-            SizedBox(
+            const SizedBox(
               height: 17.0,
             ),
             // This widget is to display the list of "to-watch" movie card.
             // The movie cards will be displayed horizontally.
             // For more information on how the list is constructed, check the
             // MovieList widget in ./lib/widgets/movie_list.dart.
-            MovieList(
+            const MovieList(
               list: kToWatch,
             ),
-            Divider(),
+            const Divider(),
             // This widget is to display the title of "Favorite" movie list.
-            CustomListTile(
+            const CustomListTile(
               icon: Icons.favorite,
               iconSize: kMainScreenTitleIconSize,
               title: 'My Favorite',
               titleTextStyle: kMainScreenTitleTextStyle,
             ),
-            SizedBox(
+            const SizedBox(
               height: 17.0,
             ),
             // This widget is to display the list of "favorite" movie card.
             // The movie cards will be displayed horizontally.
             // For more information on how the list is constructed, check the
             // MovieList widget in ./lib/widgets/movie_list.dart.
-            MovieList(
+            const MovieList(
               list: kFavorite,
             ),
-            Divider(),
+            const Divider(),
             // This widget is to display the title of "Watched" movie list.
-            CustomListTile(
+            const CustomListTile(
               icon: Icons.done,
               iconSize: kMainScreenTitleIconSize,
               title: 'Watched',
               titleTextStyle: kMainScreenTitleTextStyle,
             ),
-            SizedBox(
+            const SizedBox(
               height: 17.0,
             ),
             // This widget is to display the list of "watched" movie card.
             // The movie cards will be displayed horizontally.
             // For more information on how the list is constructed, check the
             // MovieList widget in ./lib/widgets/movie_list.dart.
-            MovieList(
+            const MovieList(
               list: kWatched,
             ),
           ],
