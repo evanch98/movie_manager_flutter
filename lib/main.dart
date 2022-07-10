@@ -11,7 +11,7 @@ import '/screens/add_to_watch.dart';
 import '/screens/add_watched.dart';
 import '/screens/help_screen.dart';
 import '/screens/logIn_screen.dart';
-import '/screens/mainScreen.dart';
+import '/screens/main_screen.dart';
 import '/screens/register_screen.dart';
 import '/screens/welcome_screen.dart';
 import '/utilities/movie_data.dart';
