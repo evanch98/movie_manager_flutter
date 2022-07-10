@@ -3,10 +3,18 @@ import 'package:movie_manager_flutter/constants.dart';
 import 'package:movie_manager_flutter/widgets/custom_button.dart';
 import 'package:movie_manager_flutter/widgets/custom_text_field.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   static String id = 'RegisterScreen';
 
   const RegisterScreen({Key? key}) : super(key: key);
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  late String _email;
+  late String _password;
 
   @override
   Widget build(BuildContext context) {
