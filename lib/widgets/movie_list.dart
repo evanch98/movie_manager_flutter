@@ -1,7 +1,9 @@
+// Importing required packages
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
 import 'package:provider/provider.dart';
 
+// Importing required modules
 import '/utilities/movie_data.dart';
 import '../utilities/movie.dart';
 import '../widgets/movie_card.dart';
