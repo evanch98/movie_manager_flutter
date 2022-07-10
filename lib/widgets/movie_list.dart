@@ -26,11 +26,10 @@ class MovieList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<MovieData>(
       builder: (context, movieData, child) {
-        // By default listCount will get the length of toWatch list of
-        // MovieData.
+        // To get the length of the specified list.
         int? listCount;
 
-        // To change the listCount according to the list parameter.
+        // To change the listCount according to the list value.
         if (list == kWatched) {
           listCount = movieData.watchedCount;
         } else if (list == kFavorite) {
@@ -39,11 +38,13 @@ class MovieList extends StatelessWidget {
           listCount = movieData.toWatchCount;
         }
         return SizedBox(
+          // The height of the SizedBox will change according to length of the
+          // list. If the length > 0, 180 else 0.
           height: listCount! > 0 ? 180.0 : 0.0,
           child: ListView.builder(
             padding: EdgeInsets.zero,
             itemBuilder: (context, index) {
-              // By default, movie will get Movie objects from toWatch list.
+              // To get the data from the specified list.
               late Movie movie;
               // To change the list where movie get Movie objects.
               if (list == kWatched) {
@@ -53,6 +54,7 @@ class MovieList extends StatelessWidget {
               } else if (list == kToWatch) {
                 movie = movieData.toWatch[index];
               }
+              // To return a list of MovieCards.
               return MovieCard(
                 image: movie.image,
                 movieTitle: movie.movieTitle,
@@ -62,6 +64,7 @@ class MovieList extends StatelessWidget {
               );
             },
             itemCount: listCount,
+            // To display the list horizontally.
             scrollDirection: Axis.horizontal,
           ),
         );
