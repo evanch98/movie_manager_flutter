@@ -5,14 +5,14 @@ import 'package:provider/provider.dart';
 
 // Importing required modules
 import '/constants.dart';
-import '/screens/aboutScreen.dart';
-import '/screens/addFavorite.dart';
-import '/screens/addToWatch.dart';
-import '/screens/addWatched.dart';
-import '/screens/helpScreen.dart';
-import '/screens/logInScreen.dart';
+import '/screens/about_screen.dart';
+import '/screens/add_favorite.dart';
+import '/screens/add_to_watch.dart';
+import '/screens/add_watched.dart';
+import '/screens/help_screen.dart';
+import '/screens/logIn_screen.dart';
 import '/screens/mainScreen.dart';
-import '/screens/registerScreen.dart';
+import '/screens/register_screen.dart';
 import '/screens/welcome_screen.dart';
 import '/utilities/movie_data.dart';
 

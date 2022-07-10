@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '/widgets/CustomListTile.dart';
+import '/widgets/custom_list_tile.dart';
 import '../constants.dart';
-import '../screens/aboutScreen.dart';
-import '../screens/helpScreen.dart';
+import '../screens/about_screen.dart';
+import '../screens/help_screen.dart';
 import '../screens/welcome_screen.dart';
 
 class CustomDrawer extends StatelessWidget {

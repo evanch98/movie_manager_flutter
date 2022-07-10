@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/screens/addFavorite.dart';
+import 'package:movie_manager_flutter/screens/add_favorite.dart';
 
-import '/screens/addToWatch.dart';
-import '/screens/addWatched.dart';
+import '/screens/add_to_watch.dart';
+import '/screens/add_watched.dart';
 import '../constants.dart';
-import '../widgets/ActionButton.dart';
-import '../widgets/CustomDrawer.dart';
-import '../widgets/CustomListTile.dart';
-import '../widgets/MovieList.dart';
-import '../widgets/expandableFab/ExpandableFab.dart';
+import '../widgets/action_button.dart';
+import '../widgets/custom_drawer.dart';
+import '../widgets/custom_list_tile.dart';
+import '../widgets/expandableFab/expandable_fab.dart';
+import '../widgets/movie_list.dart';
 
 class MainScreen extends StatelessWidget {
   static String id = 'mainScreen';

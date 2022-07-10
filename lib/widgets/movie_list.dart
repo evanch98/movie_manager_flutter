@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import '/utilities/movie_data.dart';
 import '../utilities/movie.dart';
-import '../widgets/MovieCard.dart';
+import '../widgets/movie_card.dart';
 
 /* MovieList is a StatelessWidget for building a ListView for MovieCard.
  * The widget returns Consumer<MovieData> which in turn returns SizedBox.

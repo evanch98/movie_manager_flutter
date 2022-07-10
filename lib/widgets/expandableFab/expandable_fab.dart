@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
-import 'package:movie_manager_flutter/widgets/expandableFab/ExpandingActionButton.dart';
+import 'package:movie_manager_flutter/widgets/expandableFab/expanding_action_button.dart';
 
 @immutable
 class ExpandableFab extends StatefulWidget {

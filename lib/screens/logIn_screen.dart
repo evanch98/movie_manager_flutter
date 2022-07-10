@@ -1,12 +1,18 @@
+// Importing required packages
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/constants.dart';
-import 'package:movie_manager_flutter/widgets/CustomButton.dart';
-import 'package:movie_manager_flutter/widgets/CustomTextField.dart';
 
-class RegisterScreen extends StatelessWidget {
-  static String id = 'RegisterScreen';
+// Importing required modules
+import '../constants.dart';
+import '../widgets/custom_button.dart';
+import '../widgets/custom_text_field.dart';
 
-  const RegisterScreen({Key? key}) : super(key: key);
+/*
+* LogInScreen is a StatelessWidget that allows users to log in their account.
+*/
+class LogInScreen extends StatelessWidget {
+  static String id = 'LogInScreen';
+
+  const LogInScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +62,7 @@ class RegisterScreen extends StatelessWidget {
             const SizedBox(
               height: 17.0,
             ),
-            CustomButton(buttonName: 'Register', onPressed: () {}),
+            CustomButton(buttonName: 'Log In', onPressed: () {}),
           ],
         ),
       ),

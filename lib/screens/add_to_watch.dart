@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
-import '/widgets/CustomButton.dart';
-import '/widgets/CustomTextField.dart';
+import '/widgets/custom_button.dart';
+import '/widgets/custom_text_field.dart';
 import '../constants.dart';
 import '../utilities/movie_data.dart';
 

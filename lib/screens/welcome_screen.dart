@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
-import 'package:movie_manager_flutter/screens/logInScreen.dart';
-import 'package:movie_manager_flutter/screens/registerScreen.dart';
-import 'package:movie_manager_flutter/widgets/CustomButton.dart';
+import 'package:movie_manager_flutter/screens/logIn_screen.dart';
+import 'package:movie_manager_flutter/screens/register_screen.dart';
+import 'package:movie_manager_flutter/widgets/custom_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   static String id = 'WelcomeScreen';
