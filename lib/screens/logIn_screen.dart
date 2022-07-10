@@ -1,5 +1,7 @@
 // Importing required packages
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_manager_flutter/screens/main_screen.dart';
 
 // Importing required modules
 import '../constants.dart';
@@ -21,6 +23,12 @@ class LogInScreen extends StatefulWidget {
 }
 
 class _LogInScreenState extends State<LogInScreen> {
+  final _auth = FirebaseAuth.instance;
+
+  late String _email;
+  late String _password;
+  late SnackBar _snackBar;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -56,7 +64,11 @@ class _LogInScreenState extends State<LogInScreen> {
             CustomTextField(
               labelText: 'Email',
               passwordField: false,
-              onChanged: (newValue) {},
+              onChanged: (newValue) {
+                setState(() {
+                  _email = newValue;
+                });
+              },
             ),
             const SizedBox(
               height: 17.0,
@@ -64,12 +76,48 @@ class _LogInScreenState extends State<LogInScreen> {
             CustomTextField(
               labelText: 'Password',
               passwordField: true,
-              onChanged: (newValue) {},
+              onChanged: (newValue) {
+                setState(() {
+                  _password = newValue;
+                });
+              },
             ),
             const SizedBox(
               height: 17.0,
             ),
-            CustomButton(buttonName: 'Log In', onPressed: () {}),
+            CustomButton(
+              buttonName: 'Log In',
+              onPressed: () async {
+                try {
+                  final newUser = await _auth.signInWithEmailAndPassword(
+                    email: _email,
+                    password: _password,
+                  );
+                  _snackBar = const SnackBar(
+                    content: Text('Logged in successfully.'),
+                  );
+                  Navigator.pushNamed(context, MainScreen.id);
+                } on FirebaseAuthException catch (e) {
+                  if (e.code == 'user-not-found') {
+                    _snackBar = const SnackBar(
+                      content: Text('No user exists with this email'),
+                      backgroundColor: Colors.red,
+                    );
+                  } else if (e.code == 'wrong-password') {
+                    _snackBar = const SnackBar(
+                      content: Text('Incorrect Password.'),
+                      backgroundColor: Colors.red,
+                    );
+                  } else {
+                    _snackBar = const SnackBar(
+                      content: Text('Something went wrong'),
+                      backgroundColor: Colors.red,
+                    );
+                  }
+                  ScaffoldMessenger.of(context).showSnackBar(_snackBar);
+                }
+              },
+            ),
           ],
         ),
       ),
