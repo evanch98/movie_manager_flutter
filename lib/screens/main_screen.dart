@@ -1,8 +1,9 @@
 // Importing required packages
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/screens/add_favorite.dart';
 
 // Importing required modules
+import '/screens/add_favorite.dart';
 import '/screens/add_to_watch.dart';
 import '/screens/add_watched.dart';
 import '../constants.dart';
@@ -18,10 +19,17 @@ import '../widgets/movie_list.dart';
 * can be found in "./lib/widgets/." Users can navigate to several screens from
 * the MainScreen, and the screens can be found in "./lib/screens/."
 */
-class MainScreen extends StatelessWidget {
+class MainScreen extends StatefulWidget {
   static String id = 'mainScreen';
 
   const MainScreen({Key? key}) : super(key: key);
+
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  final _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
