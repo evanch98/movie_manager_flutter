@@ -1,4 +1,5 @@
 // Importing required packages
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +18,9 @@ import '/screens/register_screen.dart';
 import '/screens/welcome_screen.dart';
 import '/utilities/movie_data.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MovieManager());
 }
 
