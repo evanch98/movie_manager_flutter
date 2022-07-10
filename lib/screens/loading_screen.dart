@@ -1,6 +1,8 @@
 // Importing required packages
 import 'package:flutter/material.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 
+import '/screens/welcome_screen.dart';
 // Importing required modules
 import '../constants.dart';
 
@@ -16,6 +18,23 @@ class LoadingScreen extends StatefulWidget {
 class _LoadingScreenState extends State<LoadingScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
+  bool hasInternet = false;
+
+  void checkConnection(BuildContext context) async {
+    hasInternet = await InternetConnectionChecker().hasConnection;
+    if (hasInternet) {
+      Navigator.pushNamed(context, WelcomeScreen.id);
+    } else {
+      SnackBar snackBar = const SnackBar(
+        content: ListTile(
+          leading: Icon(Icons.warning),
+          title: Text('No internet connection'),
+        ),
+        backgroundColor: Colors.red,
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
+  }
 
   @override
   void initState() {
@@ -30,6 +49,7 @@ class _LoadingScreenState extends State<LoadingScreen>
 
   @override
   Widget build(BuildContext context) {
+    checkConnection(context);
     return Scaffold(
       backgroundColor: kPlatinum,
       body: Center(
