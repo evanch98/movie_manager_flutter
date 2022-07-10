@@ -8,6 +8,8 @@ import '../widgets/custom_text_field.dart';
 
 /*
 * LogInScreen is a StatelessWidget that allows users to log in their account.
+* LogInScreen consists of CustomTextField and CustomButton, and they can be
+* found in "./lib/widgets/." The logo is wrapped in a Hero widget for animation.
 */
 class LogInScreen extends StatelessWidget {
   static String id = 'LogInScreen';
