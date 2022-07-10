@@ -33,17 +33,6 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
         ),
-        // To navigate to WelcomeScreen().
-        CustomListTile(
-          icon: Icons.home,
-          iconSize: 22.0,
-          title: 'Home',
-          titleTextStyle: kDrawerTitleTextStyle,
-          onTap: () {
-            Navigator.pop(context);
-            Navigator.pushNamed(context, WelcomeScreen.id);
-          },
-        ),
         // To navigate to HelpScreen().
         CustomListTile(
           icon: Icons.help,
@@ -65,7 +54,18 @@ class CustomDrawer extends StatelessWidget {
             Navigator.pop(context);
             Navigator.pushNamed(context, AboutScreen.id);
           },
-        )
+        ),
+        // To navigate to WelcomeScreen().
+        CustomListTile(
+          icon: Icons.logout,
+          iconSize: 22.0,
+          title: 'Log out',
+          titleTextStyle: kDrawerTitleTextStyle,
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.pushNamed(context, WelcomeScreen.id);
+          },
+        ),
       ],
     ));
   }
