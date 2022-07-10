@@ -10,6 +10,7 @@ import '/screens/add_favorite.dart';
 import '/screens/add_to_watch.dart';
 import '/screens/add_watched.dart';
 import '/screens/help_screen.dart';
+import '/screens/loading_screen.dart';
 import '/screens/logIn_screen.dart';
 import '/screens/main_screen.dart';
 import '/screens/register_screen.dart';
@@ -71,8 +72,9 @@ class MovieManager extends StatelessWidget {
             Theme.of(context).textTheme,
           ),
         ),
-        initialRoute: MainScreen.id,
+        initialRoute: LoadingScreen.id,
         routes: {
+          LoadingScreen.id: (context) => const LoadingScreen(),
           WelcomeScreen.id: (context) => const WelcomeScreen(),
           LogInScreen.id: (context) => const LogInScreen(),
           RegisterScreen.id: (context) => const RegisterScreen(),
