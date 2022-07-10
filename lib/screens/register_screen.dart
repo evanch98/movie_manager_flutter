@@ -1,7 +1,12 @@
+// Importing required packages
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/constants.dart';
-import 'package:movie_manager_flutter/widgets/custom_button.dart';
-import 'package:movie_manager_flutter/widgets/custom_text_field.dart';
+
+// Importing required modules
+import '/screens/main_screen.dart';
+import '../constants.dart';
+import '../widgets/custom_button.dart';
+import '../widgets/custom_text_field.dart';
 
 class RegisterScreen extends StatefulWidget {
   static String id = 'RegisterScreen';
@@ -13,6 +18,8 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  final _auth = FirebaseAuth.instance;
+
   late String _email;
   late String _password;
 
@@ -51,7 +58,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
             CustomTextField(
               labelText: 'Email',
               passwordField: false,
-              onChanged: (newValue) {},
+              onChanged: (newValue) {
+                setState(() {
+                  _email = newValue;
+                });
+              },
             ),
             const SizedBox(
               height: 17.0,
@@ -59,12 +70,36 @@ class _RegisterScreenState extends State<RegisterScreen> {
             CustomTextField(
               labelText: 'Password',
               passwordField: true,
-              onChanged: (newValue) {},
+              onChanged: (newValue) {
+                setState(() {
+                  _password = newValue;
+                });
+              },
             ),
             const SizedBox(
               height: 17.0,
             ),
-            CustomButton(buttonName: 'Register', onPressed: () {}),
+            CustomButton(
+                buttonName: 'Register',
+                onPressed: () async {
+                  try {
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                      email: _email,
+                      password: _password,
+                    );
+                    if (newUser != null) {
+                      SnackBar snackBar = const SnackBar(
+                        content: Text(
+                          'Successfully registered',
+                        ),
+                      );
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      Navigator.pushNamed(context, MainScreen.id);
+                    }
+                  } catch (e) {
+                    print(e);
+                  }
+                }),
           ],
         ),
       ),
