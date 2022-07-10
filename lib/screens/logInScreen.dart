@@ -1,8 +1,14 @@
+// Importing required packages
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/constants.dart';
-import 'package:movie_manager_flutter/widgets/CustomButton.dart';
-import 'package:movie_manager_flutter/widgets/CustomTextField.dart';
 
+// Importing required modules
+import '../constants.dart';
+import '../widgets/CustomButton.dart';
+import '../widgets/CustomTextField.dart';
+
+/*
+* LogInScreen is a StatelessWidget that allows users to log in their account.
+*/
 class LogInScreen extends StatelessWidget {
   static String id = 'LogInScreen';
 
