@@ -25,9 +25,9 @@ class LogInScreen extends StatefulWidget {
 class _LogInScreenState extends State<LogInScreen> {
   final _auth = FirebaseAuth.instance;
 
-  late String _email;
-  late String _password;
-  late SnackBar _snackBar;
+  late String _email; // user email
+  late String _password; // user password
+  late SnackBar _snackBar; // to show errors on snackBar
 
   @override
   Widget build(BuildContext context) {
@@ -87,6 +87,7 @@ class _LogInScreenState extends State<LogInScreen> {
             ),
             CustomButton(
               buttonName: 'Log In',
+              // To allow user log in to their account.
               onPressed: () async {
                 try {
                   final newUser = await _auth.signInWithEmailAndPassword(
@@ -97,6 +98,7 @@ class _LogInScreenState extends State<LogInScreen> {
                     content: Text('Logged in successfully.'),
                   );
                   Navigator.pushNamed(context, MainScreen.id);
+                  // To catch any error that will comes while logging in.
                 } on FirebaseAuthException catch (e) {
                   if (e.code == 'user-not-found') {
                     _snackBar = const SnackBar(
