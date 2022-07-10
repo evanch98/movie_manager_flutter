@@ -18,6 +18,39 @@ void main() {
   runApp(const MovieManager());
 }
 
+/*
+* MovieManage class is a StatelessWidget, and it is an entry point of the
+* application.
+* The MaterialApp is wrapped with a ChangeNotifierProvider from the provider
+* package for managing state of the application.
+* In the MaterialApp, ThemeData is used to set a theme for dividerTheme and
+* textTheme.
+* The screen classes and its descriptions are as follow:
+*     WelcomeScreen()      => A screen that allows users to navigate to Log In
+*                             and Registration screens.
+*     LogInScreen()        => A screen that allows users to log in. It will lead
+*                             to MainScreen().
+*     RegistrationScreen() => A screen that allows users to register. It will
+*                             lead to LogInScreen().
+*     MainScreen()         => The main screen that users will mostly interact
+*                             with. From the main screen, users can navigate to
+*                             several screens.
+*     AddToWatchScreen()   => A screen that allows users to add movies to the
+*                             to-watch-movie list. It can be navigated from
+*                             the MainScreen().
+*     AddWatchedScreen()   => A screen that allows users to add movies to the
+*                             watched-movie list. It can be navigated from
+*                             the MainScreen().
+*     AddFavoriteScreen()  => A screen that allows users to add movies to the
+*                             favorite-movie list. It can be navigated from
+*                             the MainScreen().
+*     HelpScreen()         => A screen that includes instructions for the
+*                             application. It can be navigated from the
+*                             MainScreen().
+*     AboutScreen()        => A screen that includes information about the
+*                             application. It can be navigated from the
+*                             MainScreen().
+*/
 class MovieManager extends StatelessWidget {
   const MovieManager({Key? key}) : super(key: key);
 
