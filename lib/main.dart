@@ -1,7 +1,9 @@
+// Importing required packages
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
+// Importing required modules
 import '/constants.dart';
 import '/screens/aboutScreen.dart';
 import '/screens/addFavorite.dart';
