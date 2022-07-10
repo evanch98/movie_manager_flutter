@@ -28,9 +28,7 @@ class CustomTextField extends StatelessWidget {
             obscureText: passwordField,
             keyboardType:
                 labelText == 'Email' ? TextInputType.emailAddress : null,
-            style: const TextStyle(
-              fontSize: 22.0,
-            ),
+            style: const TextStyle(fontSize: 22.0, color: kIndianTan),
             onChanged: onChanged,
           ),
         ],
