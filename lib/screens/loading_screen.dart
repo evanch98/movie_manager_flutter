@@ -17,20 +17,36 @@ class LoadingScreen extends StatefulWidget {
 
 class _LoadingScreenState extends State<LoadingScreen>
     with SingleTickerProviderStateMixin {
+  // To control animation
   late AnimationController _controller;
+  // To store the status of internet connectivity
   bool hasInternet = false;
 
+  // This function checks the internet connectivity.
+  // The function has one parameter context.
+  //     context: Accept a BuildContext value.
   void checkConnection(BuildContext context) async {
+    // Change the value of hasInternet based on internet connection
     hasInternet = await InternetConnectionChecker().hasConnection;
     if (hasInternet) {
+      // If there is an internet connection, it will navigate to the
+      // WelcomeScreen.
       Navigator.pushNamed(context, WelcomeScreen.id);
     } else {
-      SnackBar snackBar = const SnackBar(
-        content: ListTile(
+      // If there is no internet connectivity, a snackBar will be shown.
+      final SnackBar snackBar = SnackBar(
+        content: const ListTile(
           leading: Icon(Icons.warning),
           title: Text('No internet connection'),
         ),
         backgroundColor: Colors.red,
+        action: SnackBarAction(
+          label: 'Try again',
+          onPressed: () {
+            checkConnection(context);
+          },
+        ),
+        duration: const Duration(days: 365),
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
