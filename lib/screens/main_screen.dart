@@ -1,6 +1,8 @@
+// Importing required packages
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/screens/add_favorite.dart';
 
+// Importing required modules
 import '/screens/add_to_watch.dart';
 import '/screens/add_watched.dart';
 import '../constants.dart';
@@ -10,6 +12,12 @@ import '../widgets/custom_list_tile.dart';
 import '../widgets/expandableFab/expandable_fab.dart';
 import '../widgets/movie_list.dart';
 
+/*
+* The MainScreen is a StatelessWidget, and it is a main screen users will mostly
+* interact with. The MainScreen consists of several custom widgets all of which
+* can be found in "./lib/widgets/." Users can navigate to several screens from
+* the MainScreen, and the screens can be found in "./lib/screens/."
+*/
 class MainScreen extends StatelessWidget {
   static String id = 'mainScreen';
 
@@ -44,18 +52,21 @@ class MainScreen extends StatelessWidget {
       floatingActionButton: ExpandableFab(
         distance: 112.0,
         children: [
+          // To navigate to AddToWatchScreen
           ActionButton(
             icon: const Icon(Icons.schedule),
             onPressed: () {
               Navigator.pushNamed(context, AddToWatchScreen.id);
             },
           ),
+          // To navigate to AddFavoriteScreen
           ActionButton(
             icon: const Icon(Icons.favorite),
             onPressed: () {
               Navigator.pushNamed(context, AddFavoriteScreen.id);
             },
           ),
+          // To navigate to AddWatchedScreen
           ActionButton(
             icon: const Icon(Icons.done),
             onPressed: () {
@@ -72,11 +83,13 @@ class MainScreen extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: const <Widget>[
+            // This widget is to greet users with their name.
             Text(
               'Hello, anonymous',
               style: kGreetingTextStyle,
               textAlign: TextAlign.center,
             ),
+            // This widget is to display the title of "To Watch" movie list.
             CustomListTile(
               icon: Icons.schedule,
               iconSize: kMainScreenTitleIconSize,
@@ -86,10 +99,15 @@ class MainScreen extends StatelessWidget {
             SizedBox(
               height: 17.0,
             ),
+            // This widget is to display the list of "to-watch" movie card.
+            // The movie cards will be displayed horizontally.
+            // For more information on how the list is constructed, check the
+            // MovieList widget in ./lib/widgets/movie_list.dart.
             MovieList(
               list: kToWatch,
             ),
             Divider(),
+            // This widget is to display the title of "Favorite" movie list.
             CustomListTile(
               icon: Icons.favorite,
               iconSize: kMainScreenTitleIconSize,
@@ -99,10 +117,15 @@ class MainScreen extends StatelessWidget {
             SizedBox(
               height: 17.0,
             ),
+            // This widget is to display the list of "favorite" movie card.
+            // The movie cards will be displayed horizontally.
+            // For more information on how the list is constructed, check the
+            // MovieList widget in ./lib/widgets/movie_list.dart.
             MovieList(
               list: kFavorite,
             ),
             Divider(),
+            // This widget is to display the title of "Watched" movie list.
             CustomListTile(
               icon: Icons.done,
               iconSize: kMainScreenTitleIconSize,
@@ -112,6 +135,10 @@ class MainScreen extends StatelessWidget {
             SizedBox(
               height: 17.0,
             ),
+            // This widget is to display the list of "watched" movie card.
+            // The movie cards will be displayed horizontally.
+            // For more information on how the list is constructed, check the
+            // MovieList widget in ./lib/widgets/movie_list.dart.
             MovieList(
               list: kWatched,
             ),
