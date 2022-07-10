@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
-import '/screens/welcome_screen.dart';
 // Importing required modules
+import '/screens/welcome_screen.dart';
 import '../constants.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -20,15 +20,15 @@ class _LoadingScreenState extends State<LoadingScreen>
   // To control animation
   late AnimationController _controller;
   // To store the status of internet connectivity
-  bool hasInternet = false;
+  bool _hasInternet = false;
 
   // This function checks the internet connectivity.
   // The function has one parameter context.
   //     context: Accept a BuildContext value.
-  void checkConnection(BuildContext context) async {
+  void _checkConnection(BuildContext context) async {
     // Change the value of hasInternet based on internet connection
-    hasInternet = await InternetConnectionChecker().hasConnection;
-    if (hasInternet) {
+    _hasInternet = await InternetConnectionChecker().hasConnection;
+    if (_hasInternet) {
       // If there is an internet connection, it will navigate to the
       // WelcomeScreen.
       Navigator.pushNamed(context, WelcomeScreen.id);
@@ -37,13 +37,13 @@ class _LoadingScreenState extends State<LoadingScreen>
       final SnackBar snackBar = SnackBar(
         content: const ListTile(
           leading: Icon(Icons.warning),
-          title: Text('No internet connection'),
+          title: Text('No internet'),
         ),
         backgroundColor: Colors.red,
         action: SnackBarAction(
           label: 'Try again',
           onPressed: () {
-            checkConnection(context);
+            _checkConnection(context);
           },
         ),
         duration: const Duration(days: 365),
@@ -65,7 +65,7 @@ class _LoadingScreenState extends State<LoadingScreen>
 
   @override
   Widget build(BuildContext context) {
-    checkConnection(context);
+    _checkConnection(context);
     return Scaffold(
       backgroundColor: kPlatinum,
       body: Center(
