@@ -29,12 +29,6 @@ class _LoadingScreenState extends State<LoadingScreen>
   }
 
   @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPlatinum,
@@ -55,5 +49,11 @@ class _LoadingScreenState extends State<LoadingScreen>
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
   }
 }
