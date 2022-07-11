@@ -15,5 +15,5 @@
 - Uploading and retrieving data to and from Firebase Storage and Cloud Firestore.
 
 ## Fonts used in this project:
--[Roboto](https://fonts.google.com/specimen/Roboto)
--[Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab)
+- [Roboto](https://fonts.google.com/specimen/Roboto)
+- [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab)
