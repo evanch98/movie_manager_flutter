@@ -1,3 +1,8 @@
+import 'dart:io';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 
 import '/utilities/movie.dart';
@@ -24,24 +29,27 @@ class MovieData extends ChangeNotifier {
   List<Movie> watched = [];
   List<Movie> favorite = [];
 
-  void addMovie(String movieTitle, FileImage image, String list) {
-    if (list == kToWatch) {
-      toWatch.add(
-        Movie(
-          movieTitle: movieTitle,
-          image: image,
-        ),
-      );
-    } else if (list == kWatched) {
-      watched.add(
-        Movie(movieTitle: movieTitle, image: image),
-      );
-    } else if (list == kFavorite) {
-      favorite.add(
-        Movie(movieTitle: movieTitle, image: image),
-      );
+  String? _imageURL;
+  final _auth = FirebaseAuth.instance;
+  final _fireStore = FirebaseFirestore.instance;
+
+  void addMovie(String movieTitle, File image, String list) async {
+    final ref = FirebaseStorage.instance
+        .ref()
+        .child('images')
+        .child('${_auth.currentUser?.uid}')
+        .child('${DateTime.now()}_${image}_$list');
+    try {
+      await ref.putFile(image);
+    } on FirebaseException catch (e) {
+      print(e);
     }
-    notifyListeners();
+    _imageURL = await ref.getDownloadURL();
+
+    _fireStore.collection('${_auth.currentUser?.uid}_$list').add({
+      'title': movieTitle,
+      'image': _imageURL,
+    });
   }
 
   int get toWatchCount {
