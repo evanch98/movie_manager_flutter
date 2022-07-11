@@ -36,7 +36,7 @@ class CustomDrawer extends StatelessWidget {
         ),
         // To navigate to UsernameScreen()
         CustomListTile(
-          icon: Icons.help,
+          icon: Icons.account_circle,
           iconSize: 22.0,
           title: 'Change username',
           titleTextStyle: kDrawerTitleTextStyle,
@@ -81,6 +81,11 @@ class CustomDrawer extends StatelessWidget {
               (Route<dynamic> route) => false,
             );
           },
+        ),
+        const Text(
+          'v. 1.0.0+1',
+          textAlign: TextAlign.center,
+          style: TextStyle(color: kIndianTan),
         ),
       ],
     ));
