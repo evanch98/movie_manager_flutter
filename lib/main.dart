@@ -32,6 +32,8 @@ void main() async {
 * In the MaterialApp, ThemeData is used to set a theme for dividerTheme and
 * textTheme.
 * The screen classes and its descriptions are as follow:
+*     LoadingScreen()      => A screen that will appear while checking internet
+*                             connection.
 *     WelcomeScreen()      => A screen that allows users to navigate to Log In
 *                             and Registration screens.
 *     LogInScreen()        => A screen that allows users to log in. It will lead
