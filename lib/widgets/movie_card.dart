@@ -10,7 +10,7 @@ class MovieCard extends StatelessWidget {
     required this.movieTitle,
   }) : super(key: key);
 
-  final FileImage image;
+  final NetworkImage image;
   final String movieTitle;
   final VoidCallback? onLongPress;
 
