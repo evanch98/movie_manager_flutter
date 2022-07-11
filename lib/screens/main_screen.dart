@@ -112,7 +112,7 @@ class _MainScreenState extends State<MainScreen> {
           children: <Widget>[
             // This widget is to greet users with their name.
             Text(
-              'Hello, ${loggedInUser.email}',
+              'Hello, ${loggedInUser.displayName}',
               style: kGreetingTextStyle,
               textAlign: TextAlign.center,
             ),
