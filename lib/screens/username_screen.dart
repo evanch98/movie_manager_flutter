@@ -69,7 +69,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
               height: 17.0,
             ),
             CustomButton(
-              buttonName: 'Register',
+              buttonName: 'Update',
               onPressed: () async {
                 try {
                   await _auth.currentUser?.updateDisplayName(_username);
