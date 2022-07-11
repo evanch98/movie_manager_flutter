@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_manager_flutter/constants.dart';
 
 /* The MovieData class has three lists. They are toWatch movie list, watched
  * movie list, and favorite movie list.
@@ -44,8 +45,8 @@ class MovieData extends ChangeNotifier {
     // in Cloud FireStore.
     _fireStore.collection('${_auth.currentUser?.uid}_$list').add(
       {
-        'title': movieTitle,
-        'image': _imageURL,
+        kTitleString: movieTitle,
+        kImgString: _imageURL,
       },
     );
   }

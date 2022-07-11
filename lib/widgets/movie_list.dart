@@ -2,6 +2,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_manager_flutter/constants.dart';
 
 import '../widgets/movie_card.dart';
 
@@ -43,8 +44,8 @@ class _MovieListState extends State<MovieList> {
               final movies = snapshot.data!.docs;
               List<MovieCard> movieCards = [];
               for (var movie in movies) {
-                final title = movie['title'];
-                final image = NetworkImage(movie['image']);
+                final title = movie[kTitleString];
+                final image = NetworkImage(movie[kImgString]);
 
                 final movieCard = MovieCard(
                   image: image,
