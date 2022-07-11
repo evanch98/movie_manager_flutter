@@ -97,6 +97,7 @@ class _LogInScreenState extends State<LogInScreen> {
                   _snackBar = const SnackBar(
                     content: Text('Logged in successfully.'),
                   );
+                  if (!mounted) return;
                   Navigator.pushNamed(context, MainScreen.id);
                   // To catch any error that will comes while logging in.
                 } on FirebaseAuthException catch (e) {

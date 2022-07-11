@@ -93,6 +93,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           'Successfully registered',
                         ),
                       );
+                      if (!mounted) return;
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                       Navigator.pushNamed(context, MainScreen.id);
                     }

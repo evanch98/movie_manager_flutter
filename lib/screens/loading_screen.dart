@@ -31,6 +31,7 @@ class _LoadingScreenState extends State<LoadingScreen>
     if (_hasInternet) {
       // If there is an internet connection, it will navigate to the
       // WelcomeScreen.
+      if (!mounted) return;
       Navigator.pushNamed(context, WelcomeScreen.id);
     } else {
       // If there is no internet connectivity, a snackBar will be shown.
