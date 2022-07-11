@@ -45,7 +45,7 @@ class _MovieListState extends State<MovieList> {
               List<MovieCard> movieCards = [];
               for (var movie in movies) {
                 final title = movie[kTitleString];
-                final image = NetworkImage(movie[kImgString]);
+                final image = movie[kImgString];
 
                 final movieCard = MovieCard(
                   image: image,
