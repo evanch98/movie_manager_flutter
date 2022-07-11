@@ -19,7 +19,7 @@ class UsernameScreen extends StatefulWidget {
 class _UsernameScreenState extends State<UsernameScreen> {
   final _auth = FirebaseAuth.instance;
 
-  late String _username;
+  String _username = 'anonymous';
 
   @override
   Widget build(BuildContext context) {
