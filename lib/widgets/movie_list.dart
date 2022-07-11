@@ -46,7 +46,16 @@ class _MovieListState extends State<MovieList> {
                 final title = movie['title'];
                 final image = NetworkImage(movie['image']);
 
-                final movieCard = MovieCard(image: image, movieTitle: title);
+                final movieCard = MovieCard(
+                  image: image,
+                  movieTitle: title,
+                  onLongPress: () async {
+                    _fireStore
+                        .collection('${_auth.currentUser?.uid}_${widget.list}')
+                        .doc(movie.id)
+                        .delete();
+                  },
+                );
                 movieCards.add(movieCard);
               }
               return SizedBox(
