@@ -31,7 +31,7 @@ class MovieData extends ChangeNotifier {
         .ref()
         .child('images')
         .child('${_auth.currentUser?.uid}')
-        .child('${DateTime.now()}_${image}_$list');
+        .child('${DateTime.now()}_$list');
     try {
       // upload the image file to the Firebase storage
       await ref.putFile(image);
