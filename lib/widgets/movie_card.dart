@@ -10,7 +10,7 @@ class MovieCard extends StatelessWidget {
     required this.movieTitle,
   }) : super(key: key);
 
-  final NetworkImage image;
+  final String image;
   final String movieTitle;
   final VoidCallback? onLongPress;
 
@@ -37,9 +37,23 @@ class MovieCard extends StatelessWidget {
                 ],
               ),
               clipBehavior: Clip.hardEdge,
-              child: Image(
-                image: image,
+              child: Image.network(
+                image,
                 fit: BoxFit.fill,
+                loadingBuilder: (context, child, loadingProgress) {
+                  if (loadingProgress == null) return child;
+                  return Center(
+                    child: CircularProgressIndicator(
+                      value: loadingProgress.expectedTotalBytes != null
+                          ? loadingProgress.cumulativeBytesLoaded /
+                              loadingProgress.expectedTotalBytes!
+                          : null,
+                      color: kPlatinum,
+                    ),
+                  );
+                },
+                errorBuilder: (context, error, stackTrace) =>
+                    const Text('Some error occurs'),
               ),
             ),
             const SizedBox(
