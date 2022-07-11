@@ -28,6 +28,13 @@ class MovieCard extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
                 color: kRodeoDust,
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black54,
+                    blurRadius: 5.0,
+                    offset: Offset(0.0, 0.75),
+                  )
+                ],
               ),
               clipBehavior: Clip.hardEdge,
               child: Image(
