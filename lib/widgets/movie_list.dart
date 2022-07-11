@@ -49,11 +49,15 @@ class _MovieListState extends State<MovieList> {
                 final movieCard = MovieCard(image: image, movieTitle: title);
                 movieCards.add(movieCard);
               }
-              return Row(
-                children: movieCards,
+              return SizedBox(
+                height: 180,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: movieCards,
+                ),
               );
             } else {
-              return Row();
+              return const SizedBox();
             }
           },
         ),
