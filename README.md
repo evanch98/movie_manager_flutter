@@ -9,7 +9,7 @@
 - Expandable Floating Action Button.
 - Checking internet connectivity.
 - Powered by Google Firebase.
-- Users registration and log in with email and password.
+- Users registration and login with email and password.
 - Updating user's display name.
 - Users authentication using FirebaseAuth.
 - Uploading and retrieving data to and from Firebase Storage and Cloud Firestore.
