@@ -117,13 +117,13 @@ class _AddWatchedScreenState extends State<AddWatchedScreen> {
                 }
                 Provider.of<MovieData>(context, listen: false).addMovie(
                   movieTitle!,
-                  FileImage(image!),
+                  image!,
                   kWatched,
                 );
                 if (checkboxValue == true) {
                   Provider.of<MovieData>(context, listen: false).addMovie(
                     movieTitle!,
-                    FileImage(image!),
+                    image!,
                     kFavorite,
                   );
                 }

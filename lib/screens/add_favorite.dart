@@ -97,7 +97,7 @@ class _AddFavoriteScreenState extends State<AddFavoriteScreen> {
                 }
                 Provider.of<MovieData>(context, listen: false).addMovie(
                   movieTitle!,
-                  FileImage(image!),
+                  image!,
                   kFavorite,
                 );
                 Navigator.pop(context);
