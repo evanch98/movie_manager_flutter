@@ -1,6 +1,7 @@
 # movie_manager_flutter
 
 ## Goals
+- To showcase what I have learned about Flutter and Dart.
 - To build an application that allows users to save movies that they plan to watch, their favorite movies, and movies they have already watched.
 - To make data persistent by using [Google Firebase](https://firebase.google.com/) as BaaS.
 
