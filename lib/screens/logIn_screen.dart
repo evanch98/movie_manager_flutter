@@ -99,7 +99,7 @@ class _LogInScreenState extends State<LogInScreen> {
                   );
                   if (!mounted) return;
                   Navigator.pushNamed(context, MainScreen.id);
-                  // To catch any error that will comes while logging in.
+                  // To catch any error that will come while logging in.
                 } on FirebaseAuthException catch (e) {
                   if (e.code == 'user-not-found') {
                     _snackBar = const SnackBar(
