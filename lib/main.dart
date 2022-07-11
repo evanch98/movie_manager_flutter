@@ -17,6 +17,7 @@ import '/screens/main_screen.dart';
 import '/screens/register_screen.dart';
 import '/screens/welcome_screen.dart';
 import '/utilities/movie_data.dart';
+import 'screens/username_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,6 +41,8 @@ void main() async {
 *                             to MainScreen().
 *     RegistrationScreen() => A screen that allows users to register. It will
 *                             lead to LogInScreen().
+*     UsernameScreen()     => A screen that allows users to update their
+*                             username.
 *     MainScreen()         => The main screen that users will mostly interact
 *                             with. From the main screen, users can navigate to
 *                             several screens.
@@ -83,6 +86,7 @@ class MovieManager extends StatelessWidget {
           WelcomeScreen.id: (context) => const WelcomeScreen(),
           LogInScreen.id: (context) => const LogInScreen(),
           RegisterScreen.id: (context) => const RegisterScreen(),
+          UsernameScreen.id: (context) => const UsernameScreen(),
           MainScreen.id: (context) => const MainScreen(),
           AddToWatchScreen.id: (context) => const AddToWatchScreen(),
           AddWatchedScreen.id: (context) => const AddWatchedScreen(),

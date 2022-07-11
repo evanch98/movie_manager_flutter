@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 // Importing required modules
-import '/screens/main_screen.dart';
+import '/screens/username_screen.dart';
 import '../constants.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_text_field.dart';
@@ -95,7 +95,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       );
                       if (!mounted) return;
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                      Navigator.pushNamed(context, MainScreen.id);
+                      Navigator.pushNamed(context, UsernameScreen.id);
                     }
                   } on FirebaseAuthException catch (e) {
                     SnackBar snackBar = const SnackBar(
