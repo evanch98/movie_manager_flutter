@@ -6,6 +6,7 @@ import '/widgets/custom_list_tile.dart';
 import '../constants.dart';
 import '../screens/about_screen.dart';
 import '../screens/help_screen.dart';
+import '../screens/username_screen.dart';
 import '../screens/welcome_screen.dart';
 
 /*
@@ -32,6 +33,17 @@ class CustomDrawer extends StatelessWidget {
               child: Image.asset('images/mm.png'),
             ),
           ),
+        ),
+        // To navigate to UsernameScreen()
+        CustomListTile(
+          icon: Icons.help,
+          iconSize: 22.0,
+          title: 'Change username',
+          titleTextStyle: kDrawerTitleTextStyle,
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.pushNamed(context, UsernameScreen.id);
+          },
         ),
         // To navigate to HelpScreen().
         CustomListTile(
