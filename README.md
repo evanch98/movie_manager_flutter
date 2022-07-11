@@ -1,16 +1,19 @@
 # movie_manager_flutter
 
-A new Flutter project.
+## Goals
+- To build an application that allows users to save movies that they plan to watch, their favorite movies, and movies they have already watched.
+- To make data persistent by using [Google Firebase](https://firebase.google.com/) as BaaS.
 
-## Getting Started
+## Key Features
+- Widget animation.
+- Expandable Floating Action Button.
+- Checking internet connectivity.
+- Powered by Google Firebase.
+- Users registration and log in with email and password.
+- Updating user's display name.
+- Users authentication using FirebaseAuth.
+- Uploading and retrieving data to and from Firebase Storage and Cloud Firestore.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Fonts used in this project:
+-[Roboto](https://fonts.google.com/specimen/Roboto)
+-[Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab)
