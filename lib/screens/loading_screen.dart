@@ -49,6 +49,7 @@ class _LoadingScreenState extends State<LoadingScreen>
         ),
         duration: const Duration(days: 365),
       );
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
   }
