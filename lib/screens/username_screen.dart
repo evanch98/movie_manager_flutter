@@ -7,6 +7,11 @@ import '../constants.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_text_field.dart';
 
+/*
+* UsernameScreen is a StatefulWidget allows users to update their display name
+* on firebase. Users can navigate this screen either from RegisterScreen or
+* MainScreen. The username will be updated as an FirebaseAuth's display name.
+*/
 class UsernameScreen extends StatefulWidget {
   static String id = 'UsernameScreen';
 
@@ -17,8 +22,10 @@ class UsernameScreen extends StatefulWidget {
 }
 
 class _UsernameScreenState extends State<UsernameScreen> {
+  // To get the static instance of FirebaseAuth.
   final _auth = FirebaseAuth.instance;
 
+  // If the user does not type any name, the default name will be anonymous.
   String _username = 'anonymous';
 
   @override
@@ -57,6 +64,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
               labelText: 'Username',
               passwordField: false,
               onChanged: (newValue) {
+                // The value from the TextField will be used as an _username.
                 setState(() {
                   _username = newValue;
                 });
@@ -65,12 +73,10 @@ class _UsernameScreenState extends State<UsernameScreen> {
             const SizedBox(
               height: 17.0,
             ),
-            const SizedBox(
-              height: 17.0,
-            ),
             CustomButton(
               buttonName: 'Update',
               onPressed: () async {
+                // To update the username.
                 try {
                   await _auth.currentUser?.updateDisplayName(_username);
                   SnackBar snackBar = const SnackBar(
