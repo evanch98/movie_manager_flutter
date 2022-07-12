@@ -32,6 +32,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: kPlatinum,
       body: Padding(
         padding: const EdgeInsets.symmetric(
