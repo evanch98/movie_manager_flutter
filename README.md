@@ -10,7 +10,7 @@ Start date: 6<sup>th</sup> July 2022
 - Widget animation.
 - Expandable Floating Action Button.
 - Checking internet connectivity.
-- Pick image from gallery
+- Pick image from gallery.
 - Powered by Google Firebase.
 - Users registration and login with email and password.
 - Updating user's display name.
