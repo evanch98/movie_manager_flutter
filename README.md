@@ -30,3 +30,6 @@ Start date: 6<sup>th</sup> July 2022
 ## Fonts used in this project:
 - [Roboto](https://fonts.google.com/specimen/Roboto)
 - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab)
+
+## Color palette idea:
+- [Color Hunt](https://colorhunt.co/palette/e6e6e6c5a880532e1c0f0f0f)
