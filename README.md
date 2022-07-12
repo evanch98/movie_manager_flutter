@@ -1,4 +1,5 @@
 # movie_manager_flutter
+Start date: 6<sup>th</sup> July 2022
 
 ## Goals
 - To showcase what I have learned about Flutter and Dart.
@@ -9,11 +10,22 @@
 - Widget animation.
 - Expandable Floating Action Button.
 - Checking internet connectivity.
+- Pick image from gallery
 - Powered by Google Firebase.
 - Users registration and login with email and password.
 - Updating user's display name.
 - Users authentication using FirebaseAuth.
 - Uploading and retrieving data to and from Firebase Storage and Cloud Firestore.
+
+## Packages used in this project:
+- [provider](https://pub.dev/packages/provider)
+- [image_picker](https://pub.dev/packages/image_picker)
+- [google_fonts](https://pub.dev/packages/google_fonts)
+- [internet_connection_checker](https://pub.dev/packages/internet_connection_checker)
+- [firebase_core](https://pub.dev/packages/firebase_core)
+- [firebase_auth](https://pub.dev/packages/firebase_auth)
+- [cloud_firestore](https://pub.dev/packages/cloud_firestore)
+- [firebase_storage](https://pub.dev/packages/firebase_storage)
 
 ## Fonts used in this project:
 - [Roboto](https://fonts.google.com/specimen/Roboto)
