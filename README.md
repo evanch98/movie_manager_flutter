@@ -1,6 +1,6 @@
 # movie_manager_flutter
 Start date: 6<sup>th</sup> July 2022 <br>
-Although the application is built with Flutter, it is intended mainly for Android devices. Most configurations are only done for Android. This application might work in iOS devices as intended.
+Although the application is built with Flutter, it is intended mainly for Android devices. Most configurations are only done for Android. This application might not work in iOS devices as intended.
 
 ## Goals
 - To showcase my knowledge of Flutter and Dart.
