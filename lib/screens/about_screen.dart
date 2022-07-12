@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../constants.dart';
 
+/*
+* To display the information about this application. The AboutScreen widget only
+* includes simple widgets such as Scaffold(), Text(), and Padding().
+*/
 class AboutScreen extends StatelessWidget {
   static String id = 'AboutScreen';
 
@@ -18,6 +22,8 @@ class AboutScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
+        // Used ListView instead of Column in case the text overflow the screen
+        // in smaller devices.
         child: ListView(
           children: [
             Text(
@@ -32,7 +38,7 @@ class AboutScreen extends StatelessWidget {
               'Developed by: Kyaw Thu (Evan)\n'
               'Built with: Flutter and Dart\n'
               'Powered by: Google Firebase\n'
-              'Published: 9th July 2022\n'
+              'Published: 12th July 2022\n'
               'Version: 1.0.0+1',
               style: kParaTextStyle,
             ),
