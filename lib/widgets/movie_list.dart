@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_manager_flutter/constants.dart';
 
+// Importing required modules
 import '../widgets/movie_card.dart';
 
 /* MovieList is a StatelessWidget for building a ListView for MovieCard.

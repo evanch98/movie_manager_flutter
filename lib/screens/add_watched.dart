@@ -1,14 +1,21 @@
+// Importing required dart files
 import 'dart:io';
 
+// Importing required packages
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
+// Importing required modules
 import '/widgets/custom_button.dart';
 import '/widgets/custom_text_field.dart';
 import '../constants.dart';
 import '../utilities/movie_data.dart';
 
+/*
+* AddWatchedScreen is a StatefulWidget that allows users to add their favorite
+* movies.
+*/
 class AddWatchedScreen extends StatefulWidget {
   static String id = 'AddWatchedScreen';
 
@@ -19,10 +26,12 @@ class AddWatchedScreen extends StatefulWidget {
 }
 
 class _AddWatchedScreenState extends State<AddWatchedScreen> {
-  File? image;
-  String? movieTitle;
-  bool checkboxValue = false;
+  File? image; // image file
+  String? movieTitle; // movie title
+  bool checkboxValue = false; // value of the checkbox, false by default
 
+  // To allow users to pick images from the gallery.
+  // The function is implemented with the help of the image_picker package.
   Future pickImage() async {
     final image = await ImagePicker().pickImage(source: ImageSource.gallery);
     if (image == null) return;
@@ -115,11 +124,18 @@ class _AddWatchedScreenState extends State<AddWatchedScreen> {
                   );
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
+                // The following codes will add movie to the server with the
+                // help of the MovieData class.
+                // Provider class may be redundant in this case.
+                // Check lib/utilities/movie_data.dart for more information on
+                // how the method addMovie() is implemented.
                 Provider.of<MovieData>(context, listen: false).addMovie(
                   movieTitle!,
                   image!,
                   kWatched,
                 );
+                // If the checkbox is checked, it will also be updated in
+                // the favorite movie list.
                 if (checkboxValue == true) {
                   Provider.of<MovieData>(context, listen: false).addMovie(
                     movieTitle!,

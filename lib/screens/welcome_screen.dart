@@ -1,9 +1,16 @@
+// Importing required packages
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/constants.dart';
-import 'package:movie_manager_flutter/screens/logIn_screen.dart';
-import 'package:movie_manager_flutter/screens/register_screen.dart';
-import 'package:movie_manager_flutter/widgets/custom_button.dart';
 
+// Importing required modules
+import '/constants.dart';
+import '/screens/logIn_screen.dart';
+import '/screens/register_screen.dart';
+import '../widgets/custom_button.dart';
+
+/*
+* WelcomeScreen is a StatelessWidget that allows users to navigate to either
+* LogInScreen or RegisterScreen. It only includes simple widgets.
+*/
 class WelcomeScreen extends StatelessWidget {
   static String id = 'WelcomeScreen';
 

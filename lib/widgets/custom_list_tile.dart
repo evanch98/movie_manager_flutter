@@ -1,5 +1,8 @@
+// Importing required packages
 import 'package:flutter/material.dart';
-import 'package:movie_manager_flutter/constants.dart';
+
+// Importing required modules
+import '../constants.dart';
 
 class CustomListTile extends StatelessWidget {
   const CustomListTile({

@@ -1,14 +1,21 @@
+// Importing required dart files
 import 'dart:io';
 
+// Importing required packages
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
+// Importing required modules
 import '/widgets/custom_button.dart';
 import '/widgets/custom_text_field.dart';
 import '../constants.dart';
 import '../utilities/movie_data.dart';
 
+/*
+* AddFavoriteScreen is a StatefulWidget that allows users to add their favorite
+* movies.
+*/
 class AddFavoriteScreen extends StatefulWidget {
   static String id = 'AddFavoriteScreen';
 
@@ -19,9 +26,11 @@ class AddFavoriteScreen extends StatefulWidget {
 }
 
 class _AddFavoriteScreenState extends State<AddFavoriteScreen> {
-  File? image;
-  String? movieTitle;
+  File? image; // image file
+  String? movieTitle; // movie title
 
+  // To allow users to pick images from the gallery.
+  // The function is implemented with the help of the image_picker package.
   Future pickImage() async {
     final image = await ImagePicker().pickImage(source: ImageSource.gallery);
     if (image == null) return;
@@ -95,6 +104,11 @@ class _AddFavoriteScreenState extends State<AddFavoriteScreen> {
                   );
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
+                // The following codes will add movie to the server with the
+                // help of the MovieData class.
+                // Provider class may be redundant in this case.
+                // Check lib/utilities/movie_data.dart for more information on
+                // how the method addMovie() is implemented.
                 Provider.of<MovieData>(context, listen: false).addMovie(
                   movieTitle!,
                   image!,

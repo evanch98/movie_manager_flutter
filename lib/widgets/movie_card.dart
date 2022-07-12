@@ -2,6 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../constants.dart';
 
+/*
+* MovieCard is a StatelessWidget.
+* It has two required parameter: image and movieTitle and one optional
+* parameter: onLongPress.
+*     image: Required. Accepts a String value that specifies the path of an
+*            image.
+*     movieTitle: Required. Accepts a String value that specifies the title of
+*                 the movie.
+*     onLongPress: Optional. Accepts a callback.
+*/
 class MovieCard extends StatelessWidget {
   const MovieCard({
     Key? key,
@@ -43,6 +53,7 @@ class MovieCard extends StatelessWidget {
                 loadingBuilder: (context, child, loadingProgress) {
                   if (loadingProgress == null) return child;
                   return Center(
+                    // To show progress while loading an image
                     child: CircularProgressIndicator(
                       value: loadingProgress.expectedTotalBytes != null
                           ? loadingProgress.cumulativeBytesLoaded /
@@ -60,6 +71,8 @@ class MovieCard extends StatelessWidget {
               height: 10.0,
             ),
             Text(
+              // If the length of the movie is more than 14 characters, it will
+              // be displayed as first 11 characters + three dots.
               movieTitle.length > 14
                   ? '${movieTitle.substring(0, 11)}...'
                   : movieTitle,

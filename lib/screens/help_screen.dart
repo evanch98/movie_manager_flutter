@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../constants.dart';
 
+/*
+* HelpScreen is a StatelessWidget that allows users to read the instruction.
+* The widget only includes simple widgets.
+*/
 class HelpScreen extends StatelessWidget {
   static String id = 'HelpScreen';
 
