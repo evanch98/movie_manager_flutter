@@ -33,14 +33,14 @@ class _MainScreenState extends State<MainScreen> {
   late User loggedInUser;
 
   void getCurrentUser() {
+    // To get the current user.
     try {
       final user = _auth.currentUser;
       if (user != null) {
         loggedInUser = user;
-        print(loggedInUser.email);
       }
     } catch (e) {
-      print(e);
+      print(e); // should be updated with other codes.
     }
   }
 
