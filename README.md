@@ -1,11 +1,11 @@
 # movie_manager_flutter
 Start date: 6<sup>th</sup> July 2022
+Although the application is built with Flutter, it is intended mainly for Android devices. Most configurations are only done for Android. This application might work in iOS devices as intended.
 
 ## Goals
 - To showcase my knowledge of Flutter and Dart.
 - To build an application that allows users to save movies that they plan to watch, their favorite movies, and movies they have already watched.
 - To make data persistent by using [Google Firebase](https://firebase.google.com/) as BaaS.
-- Although the application is built with Flutter, it is intended mainly for Android devices.
 
 ## Key Features
 - Widget animation.
