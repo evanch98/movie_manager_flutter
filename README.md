@@ -17,6 +17,7 @@ Although the application is built with Flutter, it is intended mainly for Androi
 - Updating user's display name.
 - Users authentication using FirebaseAuth.
 - Uploading and retrieving data to and from Firebase Storage and Cloud Firestore.
+- Material3 design
 
 ## Packages used in this project:
 - [provider](https://pub.dev/packages/provider)
