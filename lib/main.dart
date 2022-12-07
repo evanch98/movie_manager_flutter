@@ -71,6 +71,7 @@ class MovieManager extends StatelessWidget {
       create: (context) => MovieData(),
       child: MaterialApp(
         theme: ThemeData(
+          useMaterial3: true,
           dividerTheme: const DividerThemeData(
             space: 13,
             thickness: 2,
